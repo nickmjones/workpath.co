@@ -1,0 +1,68 @@
+@import './base/variables.scss';
+@import './base/utils.scss';
+
+@font-face {
+  font-family: 'Circular Book';
+  font-weight: 200;
+  src: url('./fonts/lineto-circular-pro-book.woff') format("woff")
+}
+@font-face {
+  font-family: 'Tiempos Semibold';
+  font-weight: 400;
+  src: url('./fonts/TiemposHeadline-Semibold.woff') format("woff")
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Tiempos Semibold', Georgia, Times, serif;
+  margin: 0;
+  line-height: $line-height;
+}
+
+h1 {
+  font-size: $h1-size;
+  line-height: 1.7;
+}
+h2 {
+  font-size: $h2-size;
+  line-height: 1.5;
+}
+h3 {
+  font-size: $h3-size;
+  line-height: 1.5;
+}
+h4 {
+  font-size: $h4-size;
+  line-height: 1.5;
+}
+h5 {
+  font-size: $h5-size;
+  line-height: 1.5;
+}
+
+p {
+  font-size: $p-size-l;
+  font-family: $font-body;
+  &:not(:last-child) {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+  }
+}
+
+body {
+  font-size: $font-size;
+  font-family: $font-body;
+  margin: 0;
+  padding: 0;
+  color: #444;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: $hyperlink;
+  text-decoration: underline;
+}
