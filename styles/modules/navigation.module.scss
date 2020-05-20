@@ -1,0 +1,50 @@
+@import '../base/variables.scss';
+@import '../base/utils.scss';
+
+.navigation {
+  height: $height-navigation;
+  padding: 0 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+li.navigationLogo {
+  display: flex;
+  align-content: center;
+  margin-right: auto;
+}
+.navigation li {
+  height: $height-navigation / 2.3;
+  line-height: 2.5;
+  padding: 0 .8rem;
+  @extend .text-gray;
+}
+.navigation li.divider {
+  position: relative;
+  padding: 0 1rem;
+  &:after {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    top: 0;
+    height: 100%;
+    width: 1px;
+    content: "";
+    background: $scrub;
+  }
+}
+.navigation li.special a {
+  @extend .bg-black;
+  @extend .text-fog;
+  text-decoration: none;
+  padding: .5rem 1rem;
+  border-radius: 100px;
+}
+.navigation li.hamburger {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+}
+.navigation li.autohide {
+  @extend .hide-from-lg-down;
+}

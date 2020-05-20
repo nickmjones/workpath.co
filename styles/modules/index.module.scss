@@ -1,0 +1,50 @@
+@import '../base/variables.scss';
+@import '../base/utils.scss';
+
+.start {
+  @include is-grid(12, 2rem);
+  min-height: 580px;
+  grid-column: 1 / -2;
+
+  .copy {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    grid-column: 7 / -2;
+  }
+  .image {
+    grid-column: 1 / span 5;
+    background: url('../../public/static/routing.png') center left no-repeat;
+    background-size: contain;
+  }
+}
+
+.middle {
+  @include is-grid(12, 2rem);
+  min-height: 580px;
+  grid-column: 2 / -1;
+
+  .copy {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    grid-column: 2 / span 5;
+  }
+  .image {
+    grid-column: 8 / -1;
+    background: url('../../public/static/mobile.png') center right no-repeat;
+    background-size: contain;
+  }
+}
+
+.deck {
+  grid-column: 2 / 12;
+  text-align: center;
+  padding: 2rem 0 1rem;
+
+  @include respond-to(md) {
+    grid-column: 3 / 11;
+  }
+}

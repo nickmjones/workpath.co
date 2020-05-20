@@ -1,31 +1,33 @@
+/*
+################
+# Variables
+################
+*/
 $font-size: 16px;
 $line-height: $font-size * 1.6;
-$font-display: 'Tiempos Semibold', Georgia, Times, serif;
+$font-display: 'Caladea', Georgia, Times, serif;
 $font-body: 'Circular Book', Helvetica, Arial, sans-serif;
 
 $transparent: "transparent";
-$black     : "#444";
-$white     : "#fff";
-$coral     : "#FE7C69";
-$admiral   : "#3B4868";
-$scrub     : "#00D6B3";
-$sky       : "#3391F3";
-$hull      : "#8895B5";
-$midcentury: "#E7CB69";
-$funnies   : "#EFCEB9";
-$belaire   : "#B0E0E6";
-$fog       : "#F1F7F8";
-$hyperlink : "#005EC0";
+$black      : #444;
+$white      : #fff;
+$coral      : #FE7C69;
+$admiral    : #3B4868;
+$scrub      : #00D6B3;
+$sky        : #3391F3;
+$hull       : #8895B5;
+$midcentury : #E7CB69;
+$funnies    : #EFCEB9;
+$belaire    : #B0E0E6;
+$fog        : #F1F7F8;
+$hyperlink  : #005EC0;
 
-$h1-size: $font-size * 3;
-$h2-size: $font-size * 2.75;
-$h3-size: $font-size * 2.25;
-$h4-size: $font-size * 1.75;
-$h5-size: $font-size * 1.25;
+// these values are not scalar...
+$h1-size: 11.375rem;
+$h2-size: 6.3125rem;
+$h3-size: 4.9375rem;
+$h4-size: 2.9375rem;
+$h5-size: 1.8125rem;
 
-$p-size-s: $font-size - 1; //15
-$p-size-m: $font-size; //16
-$p-size-l: $font-size + 4; //20
-$p-size-xl: $font-size + 8; //23
-
-
+// Element sizes
+$height-navigation: 6.5rem;

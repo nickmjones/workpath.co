@@ -1,4 +1,182 @@
+/*
+################
+# Resets
+################
+*/
+
 @mixin reset {
   margin: 0;
   padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  & li {
+    list-style-type: none;
+  }
+}
+
+/*
+################
+# Grid
+################
+*/
+
+@mixin is-grid($count, $gap) {
+  display: grid;
+  grid-template-columns: repeat($count, [col-start] 1fr);
+  grid-gap: $gap;
+
+  & * {
+    grid-column: col-start / span $count;
+  }
+}
+
+/*
+################
+# Aliases
+################
+*/
+
+@mixin animate($timing, $method: "") {
+  transition: all $timing $method;
+  -webkit-transition: all $timing $method;
+  -moz-transition: all $timing $method;
+}
+@mixin border($color) {
+  border: 1px dotted $color;
+}
+
+/*
+################
+# Responsive
+################
+*/
+
+$breakpoints: (
+  null: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+@each $key, $value in $breakpoints {
+  .hide-from-#{$key}-down {
+    @media screen and (max-width: $value) {
+      display: none;
+    }
+  }
+}
+
+@mixin sm-md {
+  @media screen and (min-width: 641px) and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin md-lg {
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin lg-xl {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+@mixin xl-up {
+  @media screen and (min-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin respond-to($point) {
+  @if map-has-key($breakpoints, $point){
+    $value: map-get($breakpoints, $point);
+    @media screen and (min-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin range($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin hide-at-point($point) {
+  @if map-has-key($breakpoints, $point){
+    $value: map-get($breakpoints, $point);
+    @media screen and (min-width: $value) {
+      display: none;
+    }
+  }
+}
+
+@mixin show-breaks {
+  background: url('/static/sm.png') top left no-repeat;
+  @include sm-md { background: url('/static/sm-md.png') top left no-repeat; }
+  @include md-lg { background: url('/static/md-lg.png') top left no-repeat; }
+  @include lg-xl { background: url('/static/lg-xl.png') top left no-repeat; }
+  @include xl-up { background: url('/static/xl-up.png') top left no-repeat; }
+}
+
+/*
+################
+# Colors
+################
+*/
+
+$theme-colors: (
+  "transparent": transparent,
+  "black"      : #444,
+  "white"      : #fff,
+  "coral"      : #FE7C69,
+  "admiral"    : #3B4868,
+  "scrub"      : #00D6B3,
+  "sky"        : #3391F3,
+  "hull"       : #8895B5,
+  "midcentury" : #E7CB69,
+  "funnies"    : #EFCEB9,
+  "belaire"    : #B0E0E6,
+  "fog"        : #F1F7F8,
+  "hyperlink"  : #005EC0,
+  "gray"       : #666        
+);
+
+// Build color classes
+// e.g. <div className="text-coral bg-coral">
+@each $key, $value in $theme-colors {
+  .text-#{$key} {
+    color: $value;
+  }
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
+
+/*
+################
+# Type Utilities
+################
+*/
+
+$scale: (
+  8: 8px,
+  12: 12px,
+  15: 15px,
+  16: 16px,
+  18: 18px,
+  20: 20px,
+  24: 24px,
+  28: 28px,
+  32: 32px
+);
+
+@each $key, $value in $scale {
+  .f-#{$key} {
+    font-size: $value;
+  }
 }

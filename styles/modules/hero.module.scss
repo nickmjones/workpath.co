@@ -1,0 +1,44 @@
+@import '../base/variables.scss';
+@import '../base/utils.scss';
+
+.hero {
+  // 1. mobile first
+  background: white;
+  height: 50vh;
+  grid-column: 1 / 13;
+  position: relative;
+  display: flex;
+  padding: 0 1rem;
+
+  // 2. medium & up
+  @include respond-to(md) {
+    background: url('../../public/static/hero@1x.png') center right no-repeat;
+    background-size: 50vw;
+    height: 60vh;
+    grid-column: 2 / 12;
+    padding: 0;
+  }
+  @include respond-to(xl) {
+    min-height: 70vh;
+  }
+
+}
+
+.heroHeadline {
+  // 1. mobile first
+  display: flex;
+  flex: 0 100%;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 10vw;
+  }
+
+  @include respond-to(md) {
+    flex: 0 55vw;
+    h1 {
+      font-size: 6vw;
+    }
+  }
+}
