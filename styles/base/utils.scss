@@ -1,7 +1,7 @@
 /*
-################
+###################################################
 # Resets
-################
+###################################################
 */
 
 @mixin reset {
@@ -18,25 +18,24 @@
 }
 
 /*
-################
+###################################################
 # Grid
-################
+###################################################
 */
 
-@mixin is-grid($count, $gap) {
+@mixin is-grid($count, $gap: none) {
   display: grid;
   grid-template-columns: repeat($count, [col-start] 1fr);
   grid-gap: $gap;
-
   & * {
     grid-column: col-start / span $count;
   }
 }
 
 /*
-################
+###################################################
 # Aliases
-################
+###################################################
 */
 
 @mixin animate($timing, $method: "") {
@@ -49,9 +48,9 @@
 }
 
 /*
-################
+###################################################
 # Responsive
-################
+###################################################
 */
 
 $breakpoints: (
@@ -85,7 +84,7 @@ $breakpoints: (
     @content;
   }
 }
-@mixin xl-up {
+@mixin xl {
   @media screen and (min-width: 1281px) {
     @content;
   }
@@ -116,17 +115,17 @@ $breakpoints: (
 }
 
 @mixin show-breaks {
-  background: url('/static/sm.png') top left no-repeat;
-  @include sm-md { background: url('/static/sm-md.png') top left no-repeat; }
-  @include md-lg { background: url('/static/md-lg.png') top left no-repeat; }
-  @include lg-xl { background: url('/static/lg-xl.png') top left no-repeat; }
-  @include xl-up { background: url('/static/xl-up.png') top left no-repeat; }
+  background: url('/static/sm.png') left 60px no-repeat; background-attachment: fixed;
+  @include sm-md { background: url('/static/sm-md.png') left 60px no-repeat; background-attachment: fixed; }
+  @include md-lg { background: url('/static/md-lg.png') left 60px no-repeat; background-attachment: fixed; }
+  @include lg-xl { background: url('/static/lg-xl.png') left 60px no-repeat; background-attachment: fixed; }
+  @include xl { background: url('/static/xl-up.png') left 60px no-repeat; background-attachment: fixed; }
 }
 
 /*
-################
+###################################################
 # Colors
-################
+###################################################
 */
 
 $theme-colors: (
@@ -158,9 +157,9 @@ $theme-colors: (
 }
 
 /*
-################
+###################################################
 # Type Utilities
-################
+###################################################
 */
 
 $scale: (
@@ -176,7 +175,38 @@ $scale: (
 );
 
 @each $key, $value in $scale {
-  .f-#{$key} {
+  .fs-#{$key} {
     font-size: $value;
   }
+}
+
+$heights: (
+  "i": inherit,
+  "s": 150%,
+  "m": 200%,
+  "l": 250%,
+  "xl": 300%
+);
+
+@each $key, $value in $heights {
+  .lh-#{$key} {
+    line-height: $value;
+    margin: 0;
+  }
+}
+
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.align-center {
+  text-align: center;
+}
+.strip-margin {
+  margin: 0;
+}
+.pad-bottom {
+  margin-bottom: 1rem;
 }

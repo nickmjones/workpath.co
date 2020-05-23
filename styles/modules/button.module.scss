@@ -1,16 +1,22 @@
 @import '../base/variables.scss';
 @import '../base/utils.scss';
 
-.button {
+.default {
   background: $black;
-  display: block;
   border-radius: 100px;
   text-align: center;
   color: $fog;
+  @extend .fs-16;
   line-height: 1;
-  display: inline-block;
   padding: .75rem 1.25rem;
+  border: 1px solid transparent;
   @include animate(.15s, ease-in-out);
+  display: inline-block !important;
+  margin: 1rem 1rem 0 0;
+
+  &:last-child {
+    margin: 1rem 0 0 0;
+  }
 
   &:focus {
     outline: 0;
@@ -20,3 +26,46 @@
     background: darken($black, 15%);
   }
 }
+.ghost {
+  composes: default;
+  background: white;
+  color: $black;
+  border: 1px solid $black;
+  &:hover {
+    background: $fog;
+    color: $black;
+  }
+}
+.disabled {
+  composes: default;
+  pointer-events: none;
+  background: $hull;
+}
+.error {
+  composes: default;
+  background: $coral;
+}
+
+@keyframes barberpole {
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.loading {
+  composes: default;
+  pointer-events: none;
+  cursor: not-allowed;
+  border: 1px solid #d7d7d7;
+  color: #777;
+  background: repeating-linear-gradient(
+    45deg,
+    #efefef,
+    #efefef 20px,
+    #d7d7d7 20px,
+    #d7d7d7 40px
+  );
+  background-size: 200% 200%;
+  animation: barberpole 6s linear infinite;
+}
+

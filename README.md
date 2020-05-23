@@ -9,3 +9,6 @@
 - https://github.com/zeit/next.js/tree/master/examples/with-styled-components
 - https://www.freecodecamp.org/news/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862/
 - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout
+- https://medium.com/cartogram/embracing-constraint-with-css-modules-89ba3bbcb95d
+- https://glenmaddern.com/articles/css-modules
+- https://blog.yipl.com.np/css-modules-with-react-the-complete-guide-a98737f79c7c

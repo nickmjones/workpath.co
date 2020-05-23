@@ -1,0 +1,7 @@
+@import '../base/variables.scss';
+@import '../base/utils.scss';
+
+.footer {
+  background: $sky;
+  @include is-grid(12, 1rem);
+}

@@ -1,50 +1,173 @@
 @import '../base/variables.scss';
 @import '../base/utils.scss';
 
-.start {
-  @include is-grid(12, 2rem);
-  min-height: 580px;
-  grid-column: 1 / -2;
+// prototype container
+.container {
+  display: flex;
+  margin: auto;
+  min-height: 480px;
+  flex-flow: column wrap;
+  background-color: white;
 
-  .copy {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: column wrap;
-    grid-column: 7 / -2;
+  @include respond-to(md) {
+    flex-flow: row wrap;
   }
-  .image {
-    grid-column: 1 / span 5;
-    background: url('../../public/static/routing.png') center left no-repeat;
-    background-size: contain;
+  @include respond-to(xl) {
+    padding: 0 8vw;
   }
 }
 
-.middle {
-  @include is-grid(12, 2rem);
-  min-height: 580px;
-  grid-column: 2 / -1;
-
-  .copy {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-flow: column wrap;
-    grid-column: 2 / span 5;
+.reverse {
+  flex-flow: column-reverse wrap;
+  @include respond-to(md) {
+    flex-flow: row wrap;
   }
-  .image {
-    grid-column: 8 / -1;
-    background: url('../../public/static/mobile.png') center right no-repeat;
-    background-size: contain;
+}
+
+.copy {
+  flex: 0 100%;
+  padding: 2rem;
+  display: flex;
+  align-content: center;
+  flex-flow: row wrap;
+  @include respond-to(md) {
+    flex: 1;
+    padding: 0 3rem;
+  }
+}
+.image {
+  flex: 0 100%;
+  padding: 2rem 0;
+  @include respond-to(md) {
+    flex: 2;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+.logowall {
+  grid-column: 1 / 13;
+  display: flex;
+  flex-flow: column wrap;
+
+  @include respond-to(md) {
+    grid-column: 2 / 12;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+  }
+
+  li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+
+    @include respond-to(md) {
+      padding: 0 1rem;
+    }
   }
 }
 
 .deck {
-  grid-column: 2 / 12;
-  text-align: center;
-  padding: 2rem 0 1rem;
+  grid-column: 1 / -1;
+  padding: 2rem;
+  @include is-grid(12, 1rem);
+
+  @include respond-to(md) {
+    padding: 4rem 0;
+    flex-flow: row;
+  }
+}
+
+.deckContent {
+  grid-column: 3 / 11;
+}
+
+.roadblock {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 2rem;
+  padding: 1rem;
 
   @include respond-to(md) {
     grid-column: 3 / 11;
+    flex-flow: row;
+  }
+
+  .lColumn {
+    flex: 0 75%;
+    padding: 1rem;
+  }
+  .rColumn {
+    flex: 0 25%;
+    padding: 1rem;
+  }
+}
+
+.stats {
+  @include is-grid(12, 1rem);
+  background-color: #F8F9FA;
+  padding: 6rem 2rem;
+}
+.statsContent {
+  padding: 2rem;
+  grid-column: 1 / -1;
+
+  @include respond-to(md) {
+    grid-column: 2 / 12;
+  }
+}
+
+.quotes {
+  grid-column: 2 / 12;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  @include respond-to(md) {
+    margin-bottom: 4rem;
+  }
+}
+.quote {
+  display: flex;
+  padding: 2rem;
+  margin: .5rem;
+  border: 1px solid $scrub;
+  border-radius: 1rem;
+  flex-direction: column;
+  flex: 0 100%;
+
+  @include respond-to(md){
+    flex-basis: calc(50% - 1rem);
+  }
+  @include respond-to(lg){
+    flex-basis: calc(33% - 1rem);
+  }
+
+  p {
+    @extend .fs-20;
+    @extend .lh-s;
+    margin-bottom: auto;
+  }
+}
+.attr {
+  text-align: center;
+  align-self: flex-end;
+  margin-top: 2rem;
+  width: 100%;
+  h5 {
+    @extend .fs-24;
+    @extend .lh-s;
+  }
+  cite {
+    @extend .fs-15;
+    color: $hull;
   }
 }
