@@ -44,7 +44,7 @@ export default class Navigation extends Component {
             </ul>
         </div>
         <div className={styles.banner}>
-          <span className="jason">New</span>Workpath is now free for small teams &rarr;
+          Workpath is now free for small teams &rarr;
         </div>
         <div className={styles.navigationWrapper}>
           <ul className={styles.navigation} role="navigation">

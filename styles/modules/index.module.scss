@@ -77,9 +77,9 @@
 .deck {
   grid-column: 1 / -1;
   padding: 2rem;
-  @include isGrid(12,1rem);
 
   @include respond-to(md) {
+    grid-column: 2/12;
     padding: 4rem 0;
     flex-flow: row;
   }
