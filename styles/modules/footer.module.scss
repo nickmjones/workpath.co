@@ -37,8 +37,8 @@
   h5 {
     font-family: $font-body;
     font-weight: 600;
-    @extend .fs-12;
-    @extend .lh-m;
+    font-size: .75rem;
+    line-height: 1.6;
     margin: 0;
   }
 
@@ -46,7 +46,7 @@
     @include resetList;
   }
   ul li {
-    @extend .fs-16;
-    @extend .lh-m;
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }

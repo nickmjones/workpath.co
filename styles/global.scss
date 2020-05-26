@@ -44,8 +44,19 @@ h5 {
 }
 
 p {
-  @extend .text-gray;
+  color: $hull;
   margin-top: 1rem;
+
+  &.large {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  &.xlarge {
+    font-size: 24px;
+    line-height: 1.2;
+  }
 }
 em {
   font-style: italic;
@@ -64,10 +75,12 @@ body {
   color: #444;
   position: relative;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {

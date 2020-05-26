@@ -58,16 +58,8 @@ $breakpoints: (
   sm: 640px,
   md: 768px,
   lg: 1024px,
-  xl: 1280px
+  xl: 1280px,
 );
-
-@each $key, $value in $breakpoints {
-  .hide-from-#{$key}-down {
-    @media screen and (max-width: $value) {
-      display: none;
-    }
-  }
-}
 
 @mixin sm-md {
   @media screen and (min-width: 641px) and (max-width: 768px) {
@@ -91,7 +83,7 @@ $breakpoints: (
 }
 
 @mixin respond-to($point) {
-  @if map-has-key($breakpoints, $point){
+  @if map-has-key($breakpoints, $point) {
     $value: map-get($breakpoints, $point);
     @media screen and (min-width: $value) {
       @content;
@@ -106,7 +98,7 @@ $breakpoints: (
 }
 
 @mixin hide-at-point($point) {
-  @if map-has-key($breakpoints, $point){
+  @if map-has-key($breakpoints, $point) {
     $value: map-get($breakpoints, $point);
     @media screen and (min-width: $value) {
       display: none;
@@ -115,11 +107,24 @@ $breakpoints: (
 }
 
 @mixin showBreaks {
-  background: url('/static/sm.png') left 60px no-repeat; background-attachment: fixed;
-  @include sm-md { background: url('/static/sm-md.png') left 60px no-repeat; background-attachment: fixed; }
-  @include md-lg { background: url('/static/md-lg.png') left 60px no-repeat; background-attachment: fixed; }
-  @include lg-xl { background: url('/static/lg-xl.png') left 60px no-repeat; background-attachment: fixed; }
-  @include xl { background: url('/static/xl-up.png') left 60px no-repeat; background-attachment: fixed; }
+  background: url("/static/sm.png") left 60px no-repeat;
+  background-attachment: fixed;
+  @include sm-md {
+    background: url("/static/sm-md.png") left 60px no-repeat;
+    background-attachment: fixed;
+  }
+  @include md-lg {
+    background: url("/static/md-lg.png") left 60px no-repeat;
+    background-attachment: fixed;
+  }
+  @include lg-xl {
+    background: url("/static/lg-xl.png") left 60px no-repeat;
+    background-attachment: fixed;
+  }
+  @include xl {
+    background: url("/static/xl-up.png") left 60px no-repeat;
+    background-attachment: fixed;
+  }
 }
 
 /*
@@ -130,31 +135,20 @@ $breakpoints: (
 
 $theme-colors: (
   "transparent": transparent,
-  "black"      : #444,
-  "white"      : #fff,
-  "coral"      : #FE7C69,
-  "admiral"    : #3B4868,
-  "scrub"      : #00D6B3,
-  "sky"        : #3391F3,
-  "hull"       : #8895B5,
-  "midcentury" : #E7CB69,
-  "funnies"    : #EFCEB9,
-  "belaire"    : #B0E0E6,
-  "fog"        : #F1F7F8,
-  "hyperlink"  : #005EC0,
-  "gray"       : #666        
+  "black": #444,
+  "white": #fff,
+  "coral": #fe7c69,
+  "admiral": #3b4868,
+  "scrub": #00d6b3,
+  "sky": #3391f3,
+  "hull": #767A84,
+  "midcentury": #e7cb69,
+  "funnies": #efceb9,
+  "belaire": #b0e0e6,
+  "fog": #f1f7f8,
+  "hyperlink": #005ec0,
+  "gray": #666,
 );
-
-// Build color classes
-// e.g. <div className="text-coral bg-coral">
-@each $key, $value in $theme-colors {
-  .text-#{$key} {
-    color: $value;
-  }
-  .bg-#{$key} {
-    background-color: $value;
-  }
-}
 
 /*
 ###################################################
@@ -171,29 +165,16 @@ $scale: (
   20: 20px,
   24: 24px,
   28: 28px,
-  32: 32px
+  32: 32px,
 );
-
-@each $key, $value in $scale {
-  .fs-#{$key} {
-    font-size: $value;
-  }
-}
 
 $heights: (
   "i": inherit,
   "s": 150%,
   "m": 200%,
   "l": 250%,
-  "xl": 300%
+  "xl": 300%,
 );
-
-@each $key, $value in $heights {
-  .lh-#{$key} {
-    line-height: $value;
-    margin: 0;
-  }
-}
 
 .align-left {
   text-align: left;
@@ -209,4 +190,24 @@ $heights: (
 }
 .pad-bottom {
   margin-bottom: 1rem;
+}
+.hide-for-small {
+  @media screen and (max-width: map-get($breakpoints, sm)) {
+    display: none;
+  }
+}
+.hide-for-medium {
+  @media screen and (max-width: map-get($breakpoints, md)) {
+    display: none;
+  }
+}
+.hide-for-large {
+  @media screen and (max-width: map-get($breakpoints, lg)) {
+    display: none;
+  }
+}
+.hide-for-xlarge {
+  @media screen and (max-width: map-get($breakpoints, xl)) {
+    display: none;
+  }
 }

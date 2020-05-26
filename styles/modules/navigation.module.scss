@@ -1,5 +1,5 @@
-@import '../base/variables.scss';
-@import '../base/utils.scss';
+@import "../base/variables.scss";
+@import "../base/utils.scss";
 
 .scene {
   height: $height-navigation;
@@ -18,7 +18,7 @@
   background: $black;
   color: $fog;
   text-align: center;
-  @extend .fs-18;
+  font-size: 1.125rem;
   line-height: 3;
 }
 .overlay {
@@ -27,7 +27,7 @@
   position: absolute;
   z-index: 80;
   background: $scrub;
-  @include animate(.40s, ease-in-out);
+  @include animate(0.4s, ease-in-out);
   padding: 1rem;
 
   ul li {
@@ -37,24 +37,24 @@
     line-height: 1.5;
   }
 
-  @include respond-to(md){
+  @include respond-to(md) {
     padding: 5vw;
   }
 
   .close {
     float: right;
-    border: 1px solid rgba(255,255,255,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.5);
     padding: 5px 12px;
     color: white;
     cursor: pointer;
     border-radius: 4px;
-    transition: all 0.20s ease-in-out;
+    transition: all 0.2s ease-in-out;
     box-shadow: 0 3px 9px darken($scrub, 4%);
     &:hover {
       margin-top: 3px;
       box-shadow: 0 1px 3px darken($scrub, 4%);
     }
-  } 
+  }
 }
 .overlayOn {
   composes: overlay;
@@ -69,7 +69,6 @@
   transform: translateY(-2rem);
 }
 
-
 li.navigationLogo {
   display: flex;
   align-content: center;
@@ -78,8 +77,8 @@ li.navigationLogo {
 .navigation li {
   height: $height-navigation / 2.3;
   line-height: 2;
-  padding: 0 .8rem;
-  @extend .text-gray;
+  padding: 0 0.8rem;
+  color: $black;
 }
 .navigation li.divider {
   position: relative;
@@ -97,10 +96,10 @@ li.navigationLogo {
   }
 }
 .navigation li.special a {
-  @extend .bg-black;
-  @extend .text-fog;
+  background: $black;
+  color: $fog;
   text-decoration: none;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border-radius: 100px;
 }
 .navigation li.hamburger {
@@ -109,5 +108,7 @@ li.navigationLogo {
   align-content: center;
 }
 .navigation li.autohide {
-  @extend .hide-from-lg-down;
+  @extend .hide-for-small;
+  @extend .hide-for-medium;
+  @extend .hide-for-large;
 }

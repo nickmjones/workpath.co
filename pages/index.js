@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className={styles.copy}>
             <h4 className="text-admiral">Right job, meet right team member.</h4>
-            <p className="fs-20 lh-s pad-bottom">
+            <p className="large">
               Stop playing matchmaker between jobs and team members. Workpath
               automatically routes jobs to the person with the right skills. No
               more texting “is this something you can do?”
@@ -66,7 +66,7 @@ export default function Home() {
         <section className={`${styles.container} ${styles.reverse}`}>
           <div className={styles.copy}>
             <h4>Real mobile health team management.</h4>
-            <p className="fs-20 lh-s pad-bottom">
+            <p className="large">
               Workpath is made for mobile—so you can dispatch, track, and
               communicate with your team from anywhere. No more texting or email
               threads. Workpath also delivers status updates proactively and
@@ -86,10 +86,10 @@ export default function Home() {
       <Fade>
         <div className={styles.roadblock}>
           <div className={styles.lColumn}>
-            <p className="fs-24">
+            <p className="xlarge">
               Want to know how Workpath can help with your specific business?
             </p>
-            <p className="f-23 text-hull lh-xl">
+            <p className="large">
               See case studies on some successful partnerships.
             </p>
           </div>
@@ -102,22 +102,22 @@ export default function Home() {
       <Fade>
         <div className={styles.stats}>
           <div className={styles.statsContent}>
-            <h4 className="text-coral align-center">Just like your patients, we know you want results.</h4>
-            <p className="fs-20 text-hull lh-s align-center">
+            <h4 className="align-center">Just like your patients, we know you want results.</h4>
+            <p className="large align-center">
               Businesses that move to Workpath grow the good numbers and shrink the not so good. You also gain a partner in streamlining your workflow and winning more work.
             </p>
 
             <div className="columns">
               <div className="column align-center">
-                <h3 className="text-scrub strip-margin lh-s">40%</h3>
+                <h3>40%</h3>
                 <p className="f-14 text-hull lh-s">Decrease in phone calls</p>
               </div>
               <div className="column align-center">
-                <h3 className="text-scrub strip-margin lh-s">65%</h3>
+                <h3>65%</h3>
                 <p className="f-14 text-hull lh-s">Reduction in email volume</p>
               </div>
               <div className="column align-center">
-                <h3 className="text-scrub strip-margin lh-s">98%</h3>
+                <h3>98%</h3>
                 <p className="f-14 text-hull lh-s">Appointment compliance</p>
               </div>
             </div>
@@ -127,8 +127,8 @@ export default function Home() {
 
       <Fade>
         <div className={`${styles.deck} align-center`}>
-          <h5 className="text-coral">
-            Whoever said, <em>I love using our team dashboard?</em> <br/>Workpath users, that’s who.
+          <h5 className="align-center">
+            Whoever said, "I love using our team dashboard?" <br/>Workpath users, that’s who.
           </h5>
         </div>
 

@@ -31,6 +31,7 @@ export default class Navigation extends Component {
   render() {
     return (
       <>
+      
         <div className={this.state.isMenuOpen ? `${styles.overlayOn}` : `${styles.overlayOff}`}>
             <span className={styles.close} onClick={this.toggleMenuClick}>Close &times;</span>
             <ul>
@@ -43,9 +44,11 @@ export default class Navigation extends Component {
               <li>Get a Demo</li>
             </ul>
         </div>
+
         <div className={styles.banner}>
           Workpath is now free for small teams &rarr;
         </div>
+
         <div className={styles.navigationWrapper}>
           <ul className={styles.navigation} role="navigation">
             <li className={styles.navigationLogo}><img src="./images/wp_logo.svg" alt="Workpath logo" /></li>
@@ -61,6 +64,7 @@ export default class Navigation extends Component {
             </li>
           </ul>
         </div>
+        
       </>
     );
   }
