@@ -77,7 +77,7 @@
 .deck {
   grid-column: 1 / -1;
   padding: 2rem;
-  @include is-grid(12, 1rem);
+  @include isGrid(12,1rem);
 
   @include respond-to(md) {
     padding: 4rem 0;
@@ -112,7 +112,7 @@
 }
 
 .stats {
-  @include is-grid(12, 1rem);
+  @include isGrid(12,1rem);
   background-color: #F8F9FA;
   padding: 6rem 2rem;
 }

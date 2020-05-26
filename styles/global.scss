@@ -22,34 +22,33 @@
 h1, h2, h3, h4, h5 {
   font-family: $font-display;
   margin: 0 0 1rem;
-  line-height: $line-height;
   color: $admiral;
+  line-height: 110%;
 }
 
 h1 {
   font-size: $h1-size;
-  line-height: 110%;
 }
 h2 {
   font-size: $h2-size;
-  line-height: 110%;
 }
 h3 {
   font-size: $h3-size;
-  line-height: 110%;
 }
 h4 {
   font-size: $h4-size;
-  line-height: 110%;
 }
 h5 {
   font-size: $h5-size;
-  line-height: 110%;
+  
 }
 
 p {
   @extend .text-gray;
   margin-top: 1rem;
+}
+em {
+  font-style: italic;
 }
 
 /*
@@ -65,7 +64,6 @@ body {
   color: #444;
   position: relative;
   -webkit-font-smoothing: antialiased;
-  //background-color: rgba(231, 203, 105, 0.15);
 }
 
 body * {

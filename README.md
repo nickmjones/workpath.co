@@ -12,3 +12,4 @@
 - https://medium.com/cartogram/embracing-constraint-with-css-modules-89ba3bbcb95d
 - https://glenmaddern.com/articles/css-modules
 - https://blog.yipl.com.np/css-modules-with-react-the-complete-guide-a98737f79c7c
+- https://github.com/rnosov/react-reveal

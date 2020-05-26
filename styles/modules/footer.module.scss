@@ -1,7 +1,52 @@
 @import '../base/variables.scss';
 @import '../base/utils.scss';
 
-.footer {
-  background: $sky;
-  @include is-grid(12, 1rem);
+.wrapper {
+  background: $belaire;
+  grid-column: 1 / -1;
+  @include isGrid(12,1rem);
+
+  @include respond-to(md){
+    padding: 4rem 0;
+  }
+}
+.columns {
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column-reverse;
+
+  @include respond-to(md) {
+    flex-direction: row;
+  }
+}
+.column {
+  flex: 1;
+  display: flex;
+  padding: 2rem 1rem;
+  
+  @include respond-to(md){
+    padding: 0 .5rem;
+  }
+}
+.subColumn {
+  flex: 1;
+  &:not(:last-child){
+    margin-right: 1rem;
+  }
+
+  h5 {
+    font-family: $font-body;
+    font-weight: 600;
+    @extend .fs-12;
+    @extend .lh-m;
+    margin: 0;
+  }
+
+  ul {
+    @include resetList;
+  }
+  ul li {
+    @extend .fs-16;
+    @extend .lh-m;
+  }
 }

@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navigation from "../components/navigation"
 import styles from '../styles/modules/layout.module.scss';
 import Hero from "../components/hero";
+import Footer from '../components/footer';
 
 export default function Layout({ children }) {
   return (
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
         <main className={styles.core}>
           {children}
         </main>
+        <Footer/>
       </div>
     </div>
   );

@@ -2,10 +2,10 @@
 @import '../base/utils.scss';
 
 .wrapper {
-  @include is-grid(12);
+  @include isGrid(12);
 }
 
 .core {
   margin: auto;
-  @include is-grid(12);
+  @include isGrid(12);
 }
