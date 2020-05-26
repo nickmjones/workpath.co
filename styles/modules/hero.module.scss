@@ -1,35 +1,29 @@
-@import '../base/variables.scss';
-@import '../base/utils.scss';
+@import "../base/variables.scss";
+@import "../base/utils.scss";
 
 .hero {
-  // 1. mobile first
-  height: 50vh;
   position: relative;
   display: flex;
-  padding: 0 1rem;
+  padding: 2rem;
   background: $scrub;
+  margin-bottom: 2rem;
 
-  // 2. medium & up
   @include respond-to(md) {
-    background: url('../../public/static/hero@1x.png') center right no-repeat;
+    background: url("../../public/static/hero@1x.png") center right no-repeat;
     background-size: contain;
     height: 60vh;
     padding: 0;
-    grid-column: 2/12;
+    margin: auto 10vw;
   }
-  @include respond-to(xl) {
-    min-height: 80vh;
-  }
-
 }
 
 .heroHeadline {
-  // 1. mobile first
   display: flex;
   flex: 0 100%;
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;
+  padding: 2rem;
 
   h1 {
     font-size: 11vw;
@@ -43,5 +37,14 @@
       font-size: 5vw;
       text-align: left;
     }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+
+  @include respond-to(md) {
+    flex-direction: row;
   }
 }

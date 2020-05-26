@@ -25,10 +25,10 @@
 
 @mixin isGrid($count, $gap: none) {
   display: grid;
-  grid-template-columns: repeat($count, [col-start] 1fr);
+  grid-template-columns: repeat($count, 1fr);
   grid-gap: $gap;
   & * {
-    grid-column: col-start / span $count;
+    grid-column: 1 / span $count;
   }
 }
 
