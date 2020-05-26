@@ -4,7 +4,7 @@
 .hero {
   // 1. mobile first
   height: 50vh;
-  grid-column: 1 / 13;
+  grid-column: 1/13;
   position: relative;
   display: flex;
   padding: 0 1rem;
@@ -14,7 +14,7 @@
     background: url('../../public/static/hero@1x.png') center right no-repeat;
     background-size: contain;
     height: 60vh;
-    grid-column: 2 / 12;
+    grid-column: 2/12;
     padding: 0;
   }
   @include respond-to(xl) {
