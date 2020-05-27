@@ -1,15 +1,15 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Page from "../components/layouts/Page";
 
 export default function Cases() {
   return (
-    <Layout>
+    <Page>
       <Head>
         <title>workpath.co | Case studies</title>
       </Head>
       <h1>Foo</h1>
       <h2>Bar</h2>
       <a href="#">Test link</a>
-    </Layout>
+    </Page>
   );
 }

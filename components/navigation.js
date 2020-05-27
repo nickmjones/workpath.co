@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import styles from '../styles/modules/navigation.module.scss'
-import Hamburger from '../components/hamburger'
+import Hamburger from './Hamburger'
 import Link from 'next/link'
 
 export default class Navigation extends Component {

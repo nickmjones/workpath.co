@@ -1,5 +1,5 @@
 import React from "react";
-import button from "../styles/modules/button.module.scss";
+import styles from "../styles/modules/button.module.scss";
 
 class Button extends React.Component {
 
@@ -19,13 +19,13 @@ class Button extends React.Component {
   render() {
     if(this.state.loading === true) {
       return (
-        <div onClick={this.handleButtonClick} className={button.loading}>
+        <div onClick={this.handleButtonClick} className={styles.loading}>
           Loading...
         </div>
       );
     } else {
       return (
-        <div onClick={this.handleButtonClick} className={`${button[this.props.type]}`}>
+        <div onClick={this.handleButtonClick} className={`${styles[this.props.type]}`}>
           {this.props.text}
         </div>
       );

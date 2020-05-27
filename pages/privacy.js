@@ -1,15 +1,15 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Page from "../components/layouts/Page";
 
 export default function Privacy() {
   return (
-    <Layout>
+    <Page>
       <Head>
         <title>workpath.co | Privacy</title>
       </Head>
       <h1>Foo</h1>
       <h2>Bar</h2>
       <a href="#">Test link</a>
-    </Layout>
+    </Page>
   );
 }

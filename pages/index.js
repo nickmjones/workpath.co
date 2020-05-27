@@ -1,9 +1,9 @@
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import Homepage from "../components/homepage";
+import Homepage from "../components/layouts/Homepage";
 import styles from "../styles/modules/index.module.scss";
-import Button from "../components/button";
+import Button from "../components/Button";
 import { Fade, Slide } from "react-reveal";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
