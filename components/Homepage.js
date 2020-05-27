@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Navigation from "./Navigation";
+import Navigation from "./navigation";
 import styles from "../styles/modules/layout.module.scss";
-import Hero from "./Hero";
-import Footer from "./Footer";
+import Hero from "./hero";
+import Footer from "./footer";
 
 export default function Homepage({ children }) {
   return (

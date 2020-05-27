@@ -1,7 +1,7 @@
 import Head from "next/head";
-import Navigation from "./Navigation";
+import Navigation from "./navigation";
 import styles from "../styles/modules/layout.module.scss";
-import Footer from "./Footer"
+import Footer from "./footer"
 
 export default function Page({ children }) {
   return (
