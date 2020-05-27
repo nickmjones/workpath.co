@@ -3,7 +3,7 @@ import Navigation from "./Navigation";
 import styles from "../styles/modules/layout.module.scss";
 import Footer from "./Footer"
 
-export default function Homepage({ children }) {
+export default function Page({ children }) {
   return (
     <div>
       <Head>
