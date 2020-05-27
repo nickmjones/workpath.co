@@ -14,3 +14,4 @@
 - https://blog.yipl.com.np/css-modules-with-react-the-complete-guide-a98737f79c7c
 - https://github.com/rnosov/react-reveal
 - https://stackoverflow.com/questions/51044090/react-countup-animation-starts-immediately-after-the-page-loading-should-start/51045182
+- https://buttercms.com/blog/how-to-test-nextjs-apps#installingcypress

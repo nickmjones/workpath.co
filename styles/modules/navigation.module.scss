@@ -35,6 +35,11 @@
     font-family: $font-display;
     font-size: $h4-size;
     line-height: 1.5;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 
   @include respond-to(md) {
@@ -73,12 +78,30 @@ li.navigationLogo {
   display: flex;
   align-content: center;
   margin-right: auto;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
 }
 .navigation li {
   height: $height-navigation / 2.3;
   line-height: 2;
   padding: 0 0.8rem;
   color: $black;
+
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+  a:visited {
+    color: $black;
+    text-decoration: none;
+  }
+  a:active {
+    color: $scrub;
+    text-decoration: none;;
+  }
 }
 .navigation li.divider {
   position: relative;

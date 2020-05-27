@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "next build && netlify deploy"
+    "deploy": "next build && netlify deploy",
+    "cypress:open": "cypress open"
   },
   "dependencies": {
     "date-fns": "^2.13.0",
@@ -20,5 +21,8 @@
     "remark-html": "^11.0.2",
     "sass": "^1.26.5"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.7.0"
+  }
 }
