@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Homepage from "../components/Homepage";
-import Button from "../components/Button";
+import Button from "../components/button";
 import styles from "../styles/modules/index.module.scss";
 import { Fade, Slide } from "react-reveal";
 import CountUp from "react-countup";

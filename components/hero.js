@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/modules/hero.module.scss";
 import Link from "next/link";
-import Button from "./Button";
+import Button from "./button";
 import Fade from "react-reveal/Fade";
 
 class Hero extends React.Component {
