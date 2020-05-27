@@ -129,6 +129,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  overflow: hidden;
 
   @include respond-to(md) {
     margin-bottom: 4rem;

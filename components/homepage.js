@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Navigation from "../components/navigation"
+import Navigation from "./navigation"
 import styles from '../styles/modules/layout.module.scss';
-import Hero from "../components/hero";
-import Footer from '../components/footer';
+import Hero from "./hero";
+import Footer from './footer';
 
-export default function Layout({ children }) {
+export default function Homepage({ children }) {
   return (
     <div>
       <Head>
