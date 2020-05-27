@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navigation from "../../components/Navigation";
+import Navigation from "./Navigation";
 import styles from "../styles/modules/layout.module.scss";
 import Footer from "./Footer"
 
