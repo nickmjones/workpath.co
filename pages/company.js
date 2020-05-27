@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Page from "../components/layouts/Page";
+import Page from "../components/Page";
 
 export default function Company() {
   return (

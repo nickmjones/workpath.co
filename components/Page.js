@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navigation from "../../components/Navigation";
-import styles from "../../styles/modules/layout.module.scss";
-import Footer from "../../components/Footer";
+import styles from "../styles/modules/layout.module.scss";
+import Footer from "./Footer"
 
 export default function Homepage({ children }) {
   return (

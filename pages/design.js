@@ -1,4 +1,4 @@
-import Page from "../components/layouts/Page";
+import Page from "../components/Page";
 
 export default function Design() {
   return (
