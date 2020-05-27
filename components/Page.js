@@ -7,6 +7,7 @@ export default function Homepage({ children }) {
   return (
     <div>
       <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
       </Head>
       <div className={styles.wrapper}>
         <Navigation />
