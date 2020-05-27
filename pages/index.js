@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import Homepage from "../components/Homepage";
 import styles from "../styles/modules/index.module.scss";
-import Button from "../components/Button";
+import Button from "./Button";
 import { Fade, Slide } from "react-reveal";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
