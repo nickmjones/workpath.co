@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Page from "../components/Page";
 
-export default function Cases() {
+export default function Casestudies() {
   return (
     <Page>
       <Head>
