@@ -94,11 +94,9 @@
 
 .roadblock {
   grid-column: 1/-1;
-  display: flex;
-  flex-flow: column;
-  margin-bottom: 2rem;
   padding: 1rem;
   max-width: map-get($breakpoints, lg);
+  margin: 0 auto 2rem auto;
 
   @include respond-to(md) {
     grid-column: 3/11;
@@ -107,10 +105,6 @@
 
   .lColumn {
     flex: 0 75%;
-    padding: 1rem;
-  }
-  .rColumn {
-    flex: 0 25%;
     padding: 1rem;
   }
 }

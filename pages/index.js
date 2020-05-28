@@ -100,14 +100,12 @@ export default class Home extends React.Component {
 
         <Fade>
           <div className={styles.roadblock}>
-            <div className={styles.lColumn}>
-              <p className="xlarge coral">
-                Want to know how Workpath can help with your specific business?
-              </p>
-              <p className="large">
-                See case studies on some successful partnerships. &rarr;
-              </p>
-            </div>
+            <p className="xlarge coral align-center">
+              Want to know how Workpath can help with your specific business?
+            </p>
+            <p className="large align-center">
+              See case studies on some successful partnerships. &rarr;
+            </p>
           </div>
         </Fade>
 
