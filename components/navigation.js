@@ -58,7 +58,6 @@ export default class Navigation extends Component {
             <li>
               <a href="https://blog.workpath.co">Blog</a>
             </li>
-            <hr className="rule rule__simple" />
             <li>
               <a href="https://app.workpath.co">Log In</a>
             </li>
@@ -74,45 +73,43 @@ export default class Navigation extends Component {
           Workpath is now free for small teams &rarr;
         </div>
 
-        <div className={styles.navigationWrapper}>
-          <ul className={styles.navigation} role="navigation">
-            <li className={styles.navigationLogo}>
-              <Link href="/">
-                <a><img src="./images/wp_logo.svg" alt="Workpath logo" /></a>
-              </Link>
-            </li>
-            <li className={styles.autohide}>
-              <Link href="/company">
-                <a>Company</a>
-              </Link>
-            </li>
-            <li className={styles.autohide}>
-              <Link href="/platform">
-                <a>Platform</a>
-              </Link>
-            </li>
-            <li className={styles.autohide}>
-              <Link href="/casestudies">
-                <a>Case Studies</a>
-              </Link>
-            </li>
-            <li className={styles.autohide}>
-              <a href="https://blog.workpath.co">Blog</a>
-            </li>
-            <li className={styles.divider}></li>
-            <li className={styles.autohide}>
-              <a href="https://app.workpath.co">Log In</a>
-            </li>
-            <li className={`${styles.special} ${styles.autohide}`}>
-              <Link href="/contact">
-                <a>Get a Demo</a>
-              </Link>
-            </li>
-            <li onClick={this.toggleMenuClick} className={styles.hamburger}>
-              <Hamburger />
-            </li>
-          </ul>
-        </div>
+        <ul className={styles.navigation} role="navigation">
+          <li className={styles.navigationLogo}>
+            <Link href="/">
+              <a><img src="./images/wp_logo.svg" alt="Workpath logo" /></a>
+            </Link>
+          </li>
+          <li className={styles.autohide}>
+            <Link href="/company">
+              <a>Company</a>
+            </Link>
+          </li>
+          <li className={styles.autohide}>
+            <Link href="/platform">
+              <a>Platform</a>
+            </Link>
+          </li>
+          <li className={styles.autohide}>
+            <Link href="/casestudies">
+              <a>Case Studies</a>
+            </Link>
+          </li>
+          <li className={styles.autohide}>
+            <a href="https://blog.workpath.co">Blog</a>
+          </li>
+          <li className={styles.divider}></li>
+          <li className={styles.autohide}>
+            <a href="https://app.workpath.co">Log In</a>
+          </li>
+          <li className={`${styles.special} ${styles.autohide}`}>
+            <Link href="/contact">
+              <a>Get a Demo</a>
+            </Link>
+          </li>
+          <li onClick={this.toggleMenuClick} className={styles.hamburger}>
+            <Hamburger />
+          </li>
+        </ul>
       </>
     );
   }

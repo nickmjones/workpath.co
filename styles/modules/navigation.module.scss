@@ -6,15 +6,8 @@
   @include border(red);
 }
 
-.navigation {
-  height: $height-navigation;
-  padding: 0 1rem;
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-
 .banner {
+  grid-column: 1/13;
   background: $black;
   color: $fog;
   text-align: center;
@@ -72,6 +65,15 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(-2rem);
+}
+
+.navigation {
+  height: $height-navigation;
+  padding: 0 1rem;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  grid-column: 1/13;
 }
 
 li.navigationLogo {

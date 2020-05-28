@@ -150,6 +150,12 @@ $theme-colors: (
   "gray": #666,
 );
 
+@each $name, $value in $theme-colors {
+  .color-#{$name} {
+    color: $value;
+  }
+}
+
 /*
 ###################################################
 # Type Utilities

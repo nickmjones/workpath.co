@@ -3,7 +3,6 @@ import Head from "next/head";
 import Homepage from "../components/Homepage";
 import Button from "../components/button";
 import styles from "../styles/modules/index.module.scss";
-import { Fade, Slide } from "react-reveal";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 
@@ -28,209 +27,192 @@ export default class Home extends React.Component {
           <title>workpath.co</title>
         </Head>
 
-        <ul className={styles.logowall}>
-          <li>
+        <ul className="columns">
+          <li className="column column--centerChildren">
             <img src="./images/superhuman.svg" alt="Superhuman" />
           </li>
-          <li>
+          <li className="column column--centerChildren">
             <img src="./images/eyeem.svg" alt="Superhuman" />
           </li>
-          <li>
+          <li className="column column--centerChildren">
             <img src="./images/chartmogul.svg" alt="Superhuman" />
           </li>
-          <li>
+          <li className="column column--centerChildren">
             <img src="./images/notion.svg" alt="Superhuman" />
           </li>
-          <li>
+          <li className="column column--centerChildren">
             <img src="./images/dashdash.svg" alt="Superhuman" />
           </li>
         </ul>
 
-        <div className={`${styles.deck} align-center`}>
-          <div className={styles.deckContent}>
-            <h4 className="text-coral">
-              Replace spreadsheets, 'where are you' texts, and piles of email
-              with Workpath.
-            </h4>
-          </div>
+        <div className="columns align-center">
+          <h4>
+            Replace spreadsheets, 'where are you' texts, and piles of email with
+            Workpath.
+          </h4>
         </div>
 
-        <Fade>
-          <section className={styles.container}>
-            <div className={styles.image}>
+        <section className="featured">
+          <div className="items">
+            <div className="item item--66">
               <img
                 src="./images/routing.png"
                 alt="Right job, meet right team member"
               />
             </div>
-            <div className={styles.copy}>
-              <h4 className="text-admiral">
-                Right job, meet right team member.
-              </h4>
-              <p className="large">
+            <div className="item item--pad">
+              <h5 className="text-admiral">Right job, meet right team member.</h5>
+              <p>
                 Stop playing matchmaker between jobs and team members. Workpath
-                automatically routes jobs to the person with the right skills.
-                No more texting “is this something you can do?”
+                automatically routes jobs to the person with the right skills. No
+                more texting “is this something you can do?”
               </p>
               <Button type="default" text="See all features" />
             </div>
-          </section>
-        </Fade>
+          </div>
+        </section>
 
-        <Fade>
-          <section className={`${styles.container} ${styles.reverse}`}>
-            <div className={styles.copy}>
-              <h4>Real mobile health team management.</h4>
-              <p className="large">
-                Workpath is made for mobile—so you can dispatch, track, and
-                communicate with your team from anywhere. No more texting or
-                email threads. Workpath also delivers status updates proactively
-                and automatically. Bottom line? No more puzzled patients.
-              </p>
-              <Button type="default" text="Get a Demo" />
-            </div>
-            <div className={styles.image}>
+        <section className="featured">
+          <div className="items items--reverse">
+            <div className="item item--66">
               <img
                 src="./images/mobile.png"
                 alt="Real mobile health team management"
               />
             </div>
-          </section>
-        </Fade>
+            <div className="item item--pad">
+              <h5>Real mobile health team management.</h5>
+              <p>
+                Workpath is made for mobile—so you can dispatch, track, and
+                communicate with your team from anywhere. No more texting or email
+                threads.
+              </p>
+              <Button type="default" text="Get a Demo" />
+            </div>
+          </div>
+        </section>
 
-        <Fade>
-          <div className={styles.roadblock}>
-            <p className="xlarge coral align-center">
+        <div className="columns">
+          <div class="column">
+            <p className="xlarge color-coral align-center">
               Want to know how Workpath can help with your specific business?
             </p>
-            <p className="large align-center">
+            <p className="large color-hull align-center">
               See case studies on some successful partnerships. &rarr;
             </p>
           </div>
-        </Fade>
+        </div>
 
-        <Fade>
-          <div className={styles.stats}>
-            <div className={styles.statsContent}>
-              <h4 className="align-center">
-                Just like your patients, we know you want results.
-              </h4>
-              <p className="large align-center">
-                Businesses that move to Workpath grow the good numbers and
-                shrink the not so good. You also gain a partner in streamlining
-                your workflow and winning more work.
-              </p>
+        <div className="breakout">
+          <div className="columns columns--skinny">
+            <h4 className="align-center">
+              Just like your patients, we know you want results.
+            </h4>
+            <p className="large align-center">
+              Businesses that move to Workpath grow the good numbers and shrink
+              the not so good. You also gain a partner in streamlining your
+              workflow and winning more work.
+            </p>
+          </div>
+          <div className="columns">
+            <div className="column column--spaced align-center">
+              <h3 className="color-scrub">
+                <VisibilitySensor
+                  onChange={this.onVisibilityChange}
+                  delayedCall
+                >
+                  <CountUp
+                    start={0}
+                    end={this.state.didViewCountUp ? 40 : 0}
+                    suffix="%"
+                    duration={3}
+                  />
+                </VisibilitySensor>
+              </h3>
+              <p className="small">Decrease in phone calls &#9660;</p>
+            </div>
 
-              <div className="columns">
-                <div className="column align-center">
-                  <h3 className="counter">
-                    <VisibilitySensor
-                      onChange={this.onVisibilityChange}
-                      delayedCall
-                    >
-                      <CountUp
-                        start={0}
-                        end={this.state.didViewCountUp ? 40 : 0}
-                        suffix="%"
-                        duration={3}
-                      />
-                    </VisibilitySensor>
-                  </h3>
-                  <p className="f-14 text-hull lh-s">
-                    Decrease in phone calls &#9660;
-                  </p>
-                </div>
-                <div className="column align-center">
-                  <h3 className="counter">
-                    <VisibilitySensor
-                      onChange={this.onVisibilityChange}
-                      delayedCall
-                    >
-                      <CountUp
-                        start={0}
-                        end={this.state.didViewCountUp ? 65 : 0}
-                        suffix="%"
-                        duration={3}
-                      />
-                    </VisibilitySensor>
-                  </h3>
-                  <p className="f-14 text-hull lh-s">
-                    Reduction in email volume &#9660;
-                  </p>
-                </div>
-                <div className="column align-center">
-                  <h3 className="counter">
-                    <VisibilitySensor
-                      onChange={this.onVisibilityChange}
-                      delayedCall
-                    >
-                      <CountUp
-                        start={0}
-                        end={this.state.didViewCountUp ? 98 : 0}
-                        suffix="%"
-                        duration={3}
-                      />
-                    </VisibilitySensor>
-                  </h3>
-                  <p className="f-14 text-hull lh-s">
-                    Appointment compliance &#9650;
-                  </p>
-                </div>
-              </div>
+            <div className="column column--spaced align-center">
+              <h3 className="color-scrub">
+                <VisibilitySensor
+                  onChange={this.onVisibilityChange}
+                  delayedCall
+                >
+                  <CountUp
+                    start={0}
+                    end={this.state.didViewCountUp ? 65 : 0}
+                    suffix="%"
+                    duration={3}
+                  />
+                </VisibilitySensor>
+              </h3>
+              <p className="small">Reduction in email volume &#9660;</p>
+            </div>
+
+            <div className="column column--spaced align-center">
+              <h3 className="color-scrub">
+                <VisibilitySensor
+                  onChange={this.onVisibilityChange}
+                  delayedCall
+                >
+                  <CountUp
+                    start={0}
+                    end={this.state.didViewCountUp ? 98 : 0}
+                    suffix="%"
+                    duration={3}
+                  />
+                </VisibilitySensor>
+              </h3>
+              <p className="small">Appointment compliance &#9650;</p>
             </div>
           </div>
-        </Fade>
+        </div>
 
-        <Fade>
-          <div className={`${styles.deck} align-center`}>
-            <h5 className="align-center">
-              Whoever said, "I love using our team dashboard?" <br />
-              Workpath users, that’s who.
-            </h5>
-          </div>
-        </Fade>
+        <div className={`${styles.columns} align-center`}>
+          <h5 className="align-center">
+            Whoever said, "I love using our team dashboard?" <br />
+            Workpath users, that’s who.
+          </h5>
+        </div>
 
-        <Slide up cascade>
-          <div className={styles.quotes}>
-            <div className={styles.quote}>
-              <p>
-                “My quote is a little shorter. Sorry. I was literally saving
-                people's lives.”
-              </p>
-              <div className={styles.attr}>
-                <img src="./images/avatar_001.png" alt="Joe Bob" />
-                <h5>Wendy Watson</h5>
-                <cite>CEO, Helios Health</cite>
-              </div>
-            </div>
-
-            <div className={styles.quote}>
-              <p>
-                “If you asked me to design something to manage my mobile
-                phlebotomy team, it would be Workpath. They got it so right,
-                it’s almost uncanny.”
-              </p>
-              <div className={styles.attr}>
-                <img src="./images/avatar_002.png" alt="Joe Bob" />
-                <h5>Wade Richards</h5>
-                <cite>Founder of HealthMo</cite>
-              </div>
-            </div>
-
-            <div className={styles.quote}>
-              <p>
-                “Before Workpath I was afraid of computers. But I like computers
-                and Workpath now. What was the question?”
-              </p>
-              <div className={styles.attr}>
-                <img src="./images/avatar_003.png" alt="Joe Bob" />
-                <h5>Annette Murphy</h5>
-                <cite>Founder of CrewCorps</cite>
-              </div>
+        <div className={styles.quotes}>
+          <div className={styles.quote}>
+            <p>
+              “My quote is a little shorter. Sorry. I was literally saving
+              people's lives.”
+            </p>
+            <div className={styles.attr}>
+              <img src="./images/avatar_001.png" alt="Joe Bob" />
+              <h5>Wendy Watson</h5>
+              <cite>CEO, Helios Health</cite>
             </div>
           </div>
-        </Slide>
 
+          <div className={styles.quote}>
+            <p>
+              “If you asked me to design something to manage my mobile
+              phlebotomy team, it would be Workpath. They got it so right, it’s
+              almost uncanny.”
+            </p>
+            <div className={styles.attr}>
+              <img src="./images/avatar_002.png" alt="Joe Bob" />
+              <h5>Wade Richards</h5>
+              <cite>Founder of HealthMo</cite>
+            </div>
+          </div>
+
+          <div className={styles.quote}>
+            <p>
+              “Before Workpath I was afraid of computers. But I like computers
+              and Workpath now. What was the question?”
+            </p>
+            <div className={styles.attr}>
+              <img src="./images/avatar_003.png" alt="Joe Bob" />
+              <h5>Annette Murphy</h5>
+              <cite>Founder of CrewCorps</cite>
+            </div>
+          </div>
+        </div>
       </Homepage>
     );
   }
