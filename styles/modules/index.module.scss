@@ -8,6 +8,7 @@
   min-height: 480px;
   flex-flow: column wrap;
   background-color: white;
+  max-width: map-get($breakpoints, lg);
 
   @include respond-to(md) {
     flex-flow: row wrap;
@@ -53,6 +54,8 @@
   grid-column: 1/13;
   display: flex;
   flex-flow: column wrap;
+  max-width: map-get($breakpoints, lg);
+  margin: auto;
 
   @include respond-to(md) {
     grid-column: 2/12;
@@ -76,6 +79,8 @@
 .deck {
   grid-column: 1 / -1;
   padding: 2rem;
+  max-width: map-get($breakpoints, lg);
+  margin: auto;
 
   @include respond-to(md) {
     grid-column: 2/12;
@@ -94,6 +99,7 @@
   flex-flow: column;
   margin-bottom: 2rem;
   padding: 1rem;
+  max-width: map-get($breakpoints, lg);
 
   @include respond-to(md) {
     grid-column: 3/11;
@@ -115,6 +121,7 @@
   background-color: #f8f9fa;
   padding: 6rem 2rem;
 }
+
 .statsContent {
   padding: 2rem;
   grid-column: 1 / -1;
@@ -130,6 +137,8 @@
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
+  max-width: map-get($breakpoints, lg);
+  margin: auto;
 
   @include respond-to(md) {
     margin-bottom: 4rem;
