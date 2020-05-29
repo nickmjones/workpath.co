@@ -12,22 +12,38 @@
   color: $fog;
   text-align: center;
   font-size: 1.125rem;
-  line-height: 3;
+  height: 3.5rem;
+  line-height: 3.5rem;
+  z-index: 999;
 }
 .overlay {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
   z-index: 80;
-  background: $scrub;
-  @include animate(0.4s, ease-in-out);
+  background: $midcentury;
+  @include animate(0.2s, ease-in-out);
   padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  & * {
+    grid-column: 1 / -1;
+  }
+
+  ul {
+    margin-top: 10vh;
+  }
 
   ul li {
     color: white;
     font-family: $font-display;
-    font-size: $h4-size;
-    line-height: 1.5;
+    font-size: $h5-size;
+    line-height: 1.2;
+
+    @include respond-to(md) {
+      font-size: $h3-size;
+    }
 
     a {
       color: white;
@@ -39,20 +55,6 @@
     padding: 5vw;
   }
 
-  .close {
-    float: right;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 5px 12px;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.2s ease-in-out;
-    box-shadow: 0 3px 9px darken($scrub, 4%);
-    &:hover {
-      margin-top: 3px;
-      box-shadow: 0 1px 3px darken($scrub, 4%);
-    }
-  }
 }
 .overlayOn {
   composes: overlay;
@@ -74,6 +76,16 @@
   display: flex;
   align-items: center;
   grid-column: 1/13;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  background: white;
+  margin-top: -.5rem;
+  @include animate(.3s, ease-in-out);
+}
+.navigationShadow {
+  composes: navigation;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
 }
 
 li.navigationLogo {
@@ -131,6 +143,7 @@ li.navigationLogo {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
+  padding-top: 6px;
 }
 .navigation li.autohide {
   @extend .hide-for-small;

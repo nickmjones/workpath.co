@@ -26,6 +26,10 @@ export default class Navigation extends Component {
     }
   };
 
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
   render() {
     return (
       <>
@@ -36,9 +40,6 @@ export default class Navigation extends Component {
               : `${styles.overlayOff}`
           }
         >
-          <span className={styles.close} onClick={this.toggleMenuClick}>
-            Close &times;
-          </span>
           <ul>
             <li>
               <Link href="/company">
@@ -67,13 +68,18 @@ export default class Navigation extends Component {
               </Link>
             </li>
           </ul>
+
         </div>
 
         <div className={styles.banner}>
           Workpath is now free for small teams &rarr;
         </div>
 
-        <ul className={styles.navigation} role="navigation">
+        <ul className={
+            this.state.menuAtTop
+              ? `${styles.navigation}`
+              : `${styles.navigationShadow}`
+          } role="navigation">
           <li className={styles.navigationLogo}>
             <Link href="/">
               <a><img src="./images/wp_logo.svg" alt="Workpath logo" /></a>
@@ -97,7 +103,7 @@ export default class Navigation extends Component {
           <li className={styles.autohide}>
             <a href="https://blog.workpath.co">Blog</a>
           </li>
-          <li className={styles.divider}></li>
+          <li className={`${styles.divider} ${styles.autohide}`}></li>
           <li className={styles.autohide}>
             <a href="https://app.workpath.co">Log In</a>
           </li>
