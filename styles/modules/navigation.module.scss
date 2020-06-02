@@ -1,18 +1,13 @@
 @import "../base/variables.scss";
 @import "../base/utils.scss";
 
-.scene {
-  height: $height-navigation;
-  @include border(red);
-}
-
 .banner {
   grid-column: 1/13;
   background: $black;
   color: $fog;
   text-align: center;
   font-size: 1.125rem;
-  height: 3.5rem;
+  height: 4rem;
   line-height: 3.5rem;
   z-index: 999;
 }
@@ -80,7 +75,7 @@
   z-index: 999;
   top: 0;
   background: white;
-  margin-top: -.5rem;
+  margin: -.5rem 0 0;
   @include animate(.3s, ease-in-out);
 }
 .navigationShadow {

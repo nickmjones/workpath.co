@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "../styles/modules/hamburger.module.scss";
+import React from 'react';
 
 class Hamburger extends React.Component {
   constructor(props) {

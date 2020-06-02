@@ -1,7 +1,6 @@
-@import './reset.css';
-@import './base/variables.scss';
-@import './base/utils.scss';
-@import './index.scss';
+@import "./reset.css";
+@import "./base/variables.scss";
+@import "./base/utils.scss";
 
 /*
 ###################################################
@@ -10,17 +9,21 @@
 */
 
 @font-face {
-  font-family: 'Tiempos Medium';
+  font-family: "Tiempos Medium";
   font-weight: 400;
-  src: url('./fonts/TiemposHeadline-Medium.woff') format("woff")
+  src: url("./fonts/TiemposHeadline-Medium.woff") format("woff");
 }
 @font-face {
-  font-family: 'Circular Book';
+  font-family: "Circular Book";
   font-weight: 200;
-  src: url('./fonts/lineto-circular-pro-book.woff') format("woff")
+  src: url("./fonts/lineto-circular-pro-book.woff") format("woff");
 }
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: $font-display;
   color: $admiral;
 }
@@ -55,14 +58,25 @@ p {
   font-size: 1rem;
   line-height: 1.3;
   font-size: 1.125rem;
+  margin-bottom: 1rem;
 
-  &.large {
-    font-size: 20px;
+  &.small {
+    font-size: 0.9375rem;
     line-height: 1.5;
   }
-  
+
+  &.medium {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &.large {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+
   &.xlarge {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.2;
   }
 }
@@ -98,123 +112,132 @@ a {
 
 /*
 ###################################################
-# Global layout
+# Global layout & grid
 ###################################################
 */
 
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-gap: .5rem;
   & * {
     grid-column: 1 / 13;
   }
 }
-
-.breakout {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  background-color: $belaire;
-  padding: 3rem 0;
-  margin-bottom: 3rem;
-  
-  @include respond-to(md) {
-    grid-column: 1/13;
-  }
-}
-
-.columns {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-  padding: 2rem;
-
-  @include respond-to(md) {
-    flex-direction: row;
-    grid-column: 2/12;
-    padding: 0;
-  }
-
-  &--reverse {
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
-  }
-
-  &--skinny {
-    @include respond-to(md) {
-      flex-direction: row;
-      grid-column: 4/10;
-      padding: 0;
-    }
-  }
-  
-}
-.column {
-  flex: 1;
-
-  &--spaced {
-    padding: 1rem;
-  }
-
-  &--centerChildren {
-    padding: 1rem;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-  }
-}
-
 
 img.centered {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
-  @include border(pink);
+}
+img.cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.featured {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+.columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-  & * {
-    grid-column: 1 / -1;
+  @include respond-to(md) {
+    flex-direction: row;
+    grid-column: 2/12;
   }
 
-  .items {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-
+  &--pull-left {
     @include respond-to(md) {
       flex-direction: row;
       grid-column: 1/12;
     }
+  }
+  &--pull-right {
+    @include respond-to(md) {
+      flex-direction: row;
+      grid-column: 2/-1;
+    }
+  }
+  &--reverse {
+    @media screen and (max-width: 640px) {
+      flex-direction: column-reverse;
+    }
+  }
+}
 
-    &--reverse {
-      @include respond-to(md) {
-        flex-direction: row-reverse;
-        grid-column: 2/-1;
-      }
+.column {
+  // this is the default column
+  // flexbox will pack these automatically
+  // into .columns
+  flex: 1;
+  padding: 1rem;
+
+  // these are specified width
+  // flex items
+  &--25 {
+    flex: 0 25%;
+  }
+  &--50 {
+    flex: 0 50%;
+  }
+  &--75 {
+    flex: 0 75%;
+  }
+  &--33 {
+    flex: 0 33%;
+  }
+  &--66 {
+    flex: 0 66%;
+  }
+
+  // a column can also be
+  // a flex container
+  // this strips padding from the column
+  // and orients it as a flex parent
+
+  &--is-flex {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    @include respond-to(md) {
+      flex-direction: row;
     }
   }
 
-  .item {
-    flex: 1;
-    img {
-      display: block;
-      width: 100%;
-      object-fit: cover;
-    }
+  // allows a column to (1) be a flex parent,
+  // (2) and center its children vertically
+  // and horizontally
+  &--center-children {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+  }
+}
 
-    &--pad {
-      padding: 2rem;
-    }
+// breakout puts a new grid onto the viewport
+// that allows for edge to edge color backgrounds
+// on sections
 
-    &--66 {
-      flex: 0 66%;
-    }
+.breakout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  @include respond-to(md) {
+    grid-column: 1/13;
+  }
+
+  &.fog {
+    background-color: $fog;
+  }
+
+  &.white {
+    background-color: white;
+  }
+
+  &.belaire {
+    background-color: $belaire;
   }
 }

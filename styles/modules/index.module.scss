@@ -1,0 +1,41 @@
+@import "../base/variables.scss";
+@import "../base/utils.scss";
+
+.talker {
+  padding: 2rem;
+}
+
+.bordered {
+  flex: 1;
+  border: 1px solid $scrub;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 0 .75rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  .quote {
+    flex: 1;
+    width: 100%;
+  }
+
+  .citation {
+    flex: 1;
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+
+    img {
+      margin-bottom: .5rem;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

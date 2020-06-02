@@ -19,21 +19,6 @@
 
 /*
 ###################################################
-# Grid
-###################################################
-*/
-
-@mixin isGrid($count, $gap: none) {
-  display: grid;
-  grid-template-columns: repeat($count, 1fr);
-  grid-gap: $gap;
-  & * {
-    grid-column: 1 / span $count;
-  }
-}
-
-/*
-###################################################
 # Aliases
 ###################################################
 */
@@ -141,7 +126,7 @@ $theme-colors: (
   "admiral": #3b4868,
   "scrub": #00d6b3,
   "sky": #3391f3,
-  "hull": #767A84,
+  "hull": #767a84,
   "midcentury": #e7cb69,
   "funnies": #efceb9,
   "belaire": #b0e0e6,
@@ -152,6 +137,9 @@ $theme-colors: (
 
 @each $name, $value in $theme-colors {
   .color-#{$name} {
+    color: $value;
+  }
+  .bgcolor-#{$name} {
     color: $value;
   }
 }
@@ -191,12 +179,6 @@ $heights: (
 .align-center {
   text-align: center;
 }
-.strip-margin {
-  margin: 0;
-}
-.pad-bottom {
-  margin-bottom: 1rem;
-}
 .hide-for-small {
   @media screen and (max-width: map-get($breakpoints, sm)) {
     display: none;
@@ -216,4 +198,70 @@ $heights: (
   @media screen and (max-width: map-get($breakpoints, xl)) {
     display: none;
   }
+}
+
+// Margin classes
+.margin-medium {
+  margin: 2rem;
+}
+.margin-large {
+  margin: 4rem;
+}
+.margin-xlarge {
+  margin: 6rem;
+}
+
+.margin-y-medium {
+  margin: 2rem 0;
+}
+.margin-y-large {
+  margin: 4rem 0;
+}
+.margin-y-xlarge {
+  margin: 6rem 0;
+}
+
+.margin-x-medium {
+  margin: 0 2rem;
+}
+.margin-x-large {
+  margin: 0 4rem;
+}
+.margin-x-xlarge {
+  margin: 0 6rem;
+}
+
+// Padding classes
+.padding-medium {
+  padding: 2rem;
+}
+.padding-large {
+  padding: 4rem;
+}
+.padding-xlarge {
+  padding: 6rem;
+}
+
+.padding-y-medium {
+  padding: 2rem 0;
+}
+.padding-y-large {
+  padding: 4rem 0;
+}
+.padding-y-xlarge {
+  padding: 6rem 0;
+}
+
+.padding-x-medium {
+  padding: 0 2rem;
+}
+.padding-x-large {
+  padding: 0 4rem;
+}
+.padding-x-xlarge {
+  padding: 0 6rem;
+}
+
+.no-pad {
+  padding: 0 !important;
 }
