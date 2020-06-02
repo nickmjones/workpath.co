@@ -8,21 +8,21 @@ export default class Navigation extends Component {
     super(props);
     this.state = {
       isMenuOpen: false,
-      isScrolled: false,
+      isAtPageTop: true
     };
   }
 
   toggleMenuClick = () => {
-    this.setState((state) => ({
+    this.setState(({
       isMenuOpen: !this.state.isMenuOpen,
     }));
   };
 
   handleScroll = () => {
-    if (window.pageYOffset > 64) {
-      this.setState({ menuAtTop: false });
+    if (window.pageYOffset < 64) {
+      this.setState({ isAtPageTop: true });
     } else {
-      this.setState({ menuAtTop: true });
+      this.setState({ isAtPageTop: false });
     }
   };
 
@@ -75,11 +75,7 @@ export default class Navigation extends Component {
           Workpath is now free for small teams &rarr;
         </div>
 
-        <ul className={
-            this.state.menuAtTop
-              ? `${styles.navigation}`
-              : `${styles.navigationShadow}`
-          } role="navigation">
+        <ul className={ this.state.isAtPageTop ? `${styles.navigation}` : `${styles.navigationShadow}` } role="navigation">
           <li className={styles.navigationLogo}>
             <Link href="/">
               <a><img src="./images/wp_logo.svg" alt="Workpath logo" /></a>

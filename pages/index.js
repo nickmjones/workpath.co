@@ -1,10 +1,9 @@
-import React from "react";
-import Head from "next/head";
-import Homepage from "../components/Homepage";
-import Button from "../components/button";
-import styles from "../styles/modules/index.module.scss";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
+import React, { Fragment } from 'react'
+import Head from 'next/head'
+import Hero from '../components/hero'
+import Button from '../components/button'
+import CountUp from 'react-countup'
+import VisibilitySensor from 'react-visibility-sensor'
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -22,10 +21,12 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <Homepage>
+      <Fragment>
         <Head>
           <title>workpath.co</title>
         </Head>
+
+        <Hero/>
 
         <ul className="columns">
           <li className="column column--centerChildren">
@@ -93,7 +94,7 @@ export default class Home extends React.Component {
         </section>
 
         <div className="columns">
-          <div class="column">
+          <div className="column">
             <p className="xlarge color-coral align-center">
               Want to know how Workpath can help with your specific business?
             </p>
@@ -168,52 +169,52 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <div className={`${styles.columns} align-center`}>
-          <h5 className="align-center">
-            Whoever said, "I love using our team dashboard?" <br />
-            Workpath users, that’s who.
-          </h5>
+        <div className="columns">
+          <div className="column align-center">
+            <h5>Whoever said, "I love using our team dashboard?" <br />
+            Workpath users, that’s who.</h5>
+          </div>
         </div>
 
-        <div className={styles.quotes}>
-          <div className={styles.quote}>
+        <div className="columns">
+          <div className="column quote align-center">
             <p>
               “My quote is a little shorter. Sorry. I was literally saving
               people's lives.”
             </p>
-            <div className={styles.attr}>
+            <div className="citation">
               <img src="./images/avatar_001.png" alt="Joe Bob" />
               <h5>Wendy Watson</h5>
               <cite>CEO, Helios Health</cite>
             </div>
           </div>
 
-          <div className={styles.quote}>
+          <div className="column quote align-center">
             <p>
               “If you asked me to design something to manage my mobile
               phlebotomy team, it would be Workpath. They got it so right, it’s
               almost uncanny.”
             </p>
-            <div className={styles.attr}>
+            <div className="citation">
               <img src="./images/avatar_002.png" alt="Joe Bob" />
               <h5>Wade Richards</h5>
               <cite>Founder of HealthMo</cite>
             </div>
           </div>
 
-          <div className={styles.quote}>
+          <div className="column quote align-center">
             <p>
               “Before Workpath I was afraid of computers. But I like computers
               and Workpath now. What was the question?”
             </p>
-            <div className={styles.attr}>
+            <div className="citation">
               <img src="./images/avatar_003.png" alt="Joe Bob" />
               <h5>Annette Murphy</h5>
               <cite>Founder of CrewCorps</cite>
             </div>
           </div>
         </div>
-      </Homepage>
+      </Fragment>
     );
   }
 }

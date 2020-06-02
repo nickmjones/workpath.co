@@ -1,6 +1,7 @@
 @import './reset.css';
 @import './base/variables.scss';
 @import './base/utils.scss';
+@import './index.scss';
 
 /*
 ###################################################
@@ -163,6 +164,7 @@ a {
     justify-content: center;
   }
 }
+
 
 img.centered {
   display: block;

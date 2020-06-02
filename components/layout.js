@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Navigation from "./navigation";
-import Hero from "./hero";
 import Footer from "./footer";
 
 export default function Homepage({ children }) {
@@ -11,7 +10,6 @@ export default function Homepage({ children }) {
       </Head>
       <div className="wrapper">
         <Navigation />
-        <Hero />
         { children }
         <Footer/>
       </div>
