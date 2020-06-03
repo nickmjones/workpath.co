@@ -30,21 +30,21 @@ h5 {
 
 h1 {
   font-size: $h1-size;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: $h1-size/2;
 }
 h2 {
   font-size: $h2-size;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: $h2-size/2;
 }
 h3 {
   font-size: $h3-size;
-  line-height: 1;
+  line-height: 1.2;
 }
 h4 {
   font-size: $h4-size;
-  line-height: 1;
+  line-height: 1.2;
   margin-bottom: $h4-size/3;
 }
 h5 {
@@ -98,6 +98,7 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include showBreaks;
 }
 
 body * {
@@ -141,6 +142,7 @@ img.cover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
 
   @include respond-to(md) {
     flex-direction: row;
@@ -215,6 +217,13 @@ img.cover {
     align-content: center;
     justify-content: center;
   }
+
+  //
+  &--roomy {
+    @include respond-to(md){
+      flex: 0 50%;
+    }
+  }
 }
 
 // breakout puts a new grid onto the viewport
@@ -227,17 +236,5 @@ img.cover {
 
   @include respond-to(md) {
     grid-column: 1/13;
-  }
-
-  &.fog {
-    background-color: $fog;
-  }
-
-  &.white {
-    background-color: white;
-  }
-
-  &.belaire {
-    background-color: $belaire;
   }
 }

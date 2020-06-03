@@ -92,22 +92,22 @@ $breakpoints: (
 }
 
 @mixin showBreaks {
-  background: url("/static/sm.png") left 60px no-repeat;
+  background: url("/static/sm.png") left 100px no-repeat;
   background-attachment: fixed;
   @include sm-md {
-    background: url("/static/sm-md.png") left 60px no-repeat;
+    background: url("/static/sm-md.png") left 100px no-repeat;
     background-attachment: fixed;
   }
   @include md-lg {
-    background: url("/static/md-lg.png") left 60px no-repeat;
+    background: url("/static/md-lg.png") left 100px no-repeat;
     background-attachment: fixed;
   }
   @include lg-xl {
-    background: url("/static/lg-xl.png") left 60px no-repeat;
+    background: url("/static/lg-xl.png") left 100px no-repeat;
     background-attachment: fixed;
   }
   @include xl {
-    background: url("/static/xl-up.png") left 60px no-repeat;
+    background: url("/static/xl-up.png") left 100px no-repeat;
     background-attachment: fixed;
   }
 }
@@ -140,7 +140,7 @@ $theme-colors: (
     color: $value;
   }
   .bgcolor-#{$name} {
-    color: $value;
+    background-color: $value;
   }
 }
 

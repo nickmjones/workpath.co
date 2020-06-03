@@ -63,7 +63,7 @@ export default class Home extends React.Component {
             />
           </div>
           <div className="column column--center-children">
-            <div class={styles.talker}>
+            <div className={styles.talker}>
               <h5 className="text-admiral">
                 Right job, meet right team member.
               </h5>
@@ -79,7 +79,7 @@ export default class Home extends React.Component {
 
         <section className="columns columns--pull-right columns--reverse">
           <div className="column column--center-children">
-            <div class={styles.talker}>
+            <div className={styles.talker}>
               <h5 className="text-admiral">
                 Real mobile health team management.
               </h5>
@@ -111,7 +111,7 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <div className="breakout fog padding-y-xlarge">
+        <div className="breakout bgcolor-fog padding-y-xlarge">
           <div className="columns">
             <div className="column align-center">
               <h4>

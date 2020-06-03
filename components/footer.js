@@ -2,7 +2,7 @@ import styles from "../styles/modules/footer.module.scss";
 
 export default function Footer () {
   return(
-    <section class="breakout belaire padding-y-xlarge">
+    <section class="breakout bgcolor-belaire padding-y-xlarge">
       <div className="columns">
         <div className="column">
           <ul>
