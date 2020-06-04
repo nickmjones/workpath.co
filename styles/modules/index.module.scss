@@ -1,5 +1,4 @@
-@import "../base/variables.scss";
-@import "../base/utils.scss";
+@import "../base/base";
 
 .talker {
   padding: 2rem;
@@ -7,7 +6,7 @@
 
 .bordered {
   flex: 1;
-  border: 1px solid $scrub;
+  border: 1px solid color(scrub);
   padding: 1.5rem;
   border-radius: 12px;
   margin: .75rem;

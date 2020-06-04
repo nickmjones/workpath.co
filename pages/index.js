@@ -47,11 +47,11 @@ export default class Home extends React.Component {
           </li>
         </ul>
 
-        <div className="columns align-center margin-y-medium">
-          <h4>
+        <div className="columns margin-y-xlarge">
+          <h3>
             Replace spreadsheets, 'where are you' texts, and piles of email with
             Workpath.
-          </h4>
+          </h3>
         </div>
 
         <section className="columns columns--pull-left">
@@ -101,11 +101,11 @@ export default class Home extends React.Component {
         </section>
 
         <div className="columns margin-y-large">
-          <div className="column">
-            <p className="xlarge color-coral align-center">
+          <div className="column align-right">
+            <p className="xlarge color-quartz">
               Want to know how Workpath can help with your specific business?
             </p>
-            <p className="large color-hull align-center">
+            <p className="large color-hull">
               See case studies on some successful partnerships. &rarr;
             </p>
           </div>
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
 
         <div className="breakout bgcolor-fog padding-y-xlarge">
           <div className="columns">
-            <div className="column align-center">
+            <div className="column column--75 column--spaced margin-top-medium margin-bottom-medium">
               <h4>
                 Just like your patients, we know you want results.
               </h4>
@@ -124,9 +124,10 @@ export default class Home extends React.Component {
               </p>
             </div>
           </div>
-          <div className="columns">
-            <div className="column column--spaced align-center">
-              <h3 className="color-scrub">
+          <div className="columns columns--wrap">
+            <div className="column column--75 column--spaced margin-top-medium margin-bottom-medium">
+              <h4>
+                <span className="color-midcentury">
                 <VisibilitySensor
                   onChange={this.onVisibilityChange}
                   delayedCall
@@ -137,13 +138,13 @@ export default class Home extends React.Component {
                     suffix="%"
                     duration={3}
                   />
-                </VisibilitySensor>
-              </h3>
-              <p className="small">Decrease in phone calls &#9660;</p>
+                </VisibilitySensor></span> Decrease in phone calls
+              </h4>
             </div>
 
-            <div className="column column--spaced align-center">
-              <h3 className="color-scrub">
+            <div className="column column--75 column--spaced margin-bottom-medium">
+              <h4>
+                <span className="color-scrub">
                 <VisibilitySensor
                   onChange={this.onVisibilityChange}
                   delayedCall
@@ -154,13 +155,13 @@ export default class Home extends React.Component {
                     suffix="%"
                     duration={3}
                   />
-                </VisibilitySensor>
-              </h3>
-              <p className="small">Reduction in email volume &#9660;</p>
+                </VisibilitySensor></span> Reduction in email volume
+              </h4>
             </div>
 
-            <div className="column column--spaced align-center">
-              <h3 className="color-scrub">
+            <div className="column column--75 column--spaced margin-bottom-medium">
+              <h4>
+                <span className="color-quartz">
                 <VisibilitySensor
                   onChange={this.onVisibilityChange}
                   delayedCall
@@ -171,9 +172,8 @@ export default class Home extends React.Component {
                     suffix="%"
                     duration={3}
                   />
-                </VisibilitySensor>
-              </h3>
-              <p className="small">Appointment compliance &#9650;</p>
+                </VisibilitySensor></span> Appointment compliance
+              </h4>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@ export default class Home extends React.Component {
             </div>
           </div>
 
-          <div className="columns">
+          <div className="columns columns--pack-tight">
             <div className={styles.bordered}>
               <div className={styles.quote}>
                 <p>
@@ -201,7 +201,7 @@ export default class Home extends React.Component {
               <div className={styles.citation}>
                 <img src="./images/avatar_001.png" alt="Joe Bob" />
                 <p className="large color-hull">Wendy Watson</p>
-                <p className="small color-coral">CEO, Helios Health</p>
+                <p className="small color-quartz">CEO, Helios Health</p>
               </div>
             </div>
 
@@ -217,7 +217,7 @@ export default class Home extends React.Component {
               <div className={styles.citation}>
                 <img src="./images/avatar_002.png" alt="Joe Bob" />
                 <p className="large color-hull">Wade Richards</p>
-                <p className="small color-coral">Founder of HealthMo</p>
+                <p className="small color-quartz">Founder of HealthMo</p>
               </div>
             </div>
 
@@ -232,7 +232,7 @@ export default class Home extends React.Component {
               <div className={styles.citation}>
                 <img src="./images/avatar_003.png" alt="Joe Bob" />
                 <p className="large color-hull">Annette Murphy</p>
-                <p className="small color-coral">Founder of CrewCorps</p>
+                <p className="small color-quartz">Founder of CrewCorps</p>
               </div>
             </div>
           </div>

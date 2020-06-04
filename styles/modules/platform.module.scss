@@ -1,5 +1,4 @@
-@import "../base/variables.scss";
-@import "../base/utils.scss";
+@import "../base/base";
 
 .billboard {
   background: white url('../../public/images/nav_photo.png') center center no-repeat;
@@ -23,10 +22,10 @@
   justify-content: center;
 
   @include respond-to(md) {
-    grid-column: 2/6;
+    grid-column: 2/7;
   }
   
   * {
-    color: $fog;
+    color: color(fog);
   }
 }

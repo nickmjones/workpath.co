@@ -1,11 +1,10 @@
-@import "../base/variables.scss";
-@import "../base/utils.scss";
+@import "../base/base";
 
 .hero {
   position: relative;
   display: flex;
   padding: 2rem;
-  background: $scrub;
+  background: color(scrub);
   margin-bottom: 2rem;
 
   @include respond-to(md) {

@@ -1,15 +1,13 @@
 @import "./reset.css";
-@import "./base/variables.scss";
-@import "./base/utils.scss";
+@import "./base/base";
 
 /*
 ###################################################
 # Fonts
 ###################################################
 */
-
 @font-face {
-  font-family: "Tiempos Medium";
+  font-family: "Tiempos Headline";
   font-weight: 400;
   src: url("./fonts/TiemposHeadline-Medium.woff") format("woff");
 }
@@ -25,22 +23,23 @@ h3,
 h4,
 h5 {
   font-family: $font-display;
-  color: $admiral;
+  color: color(admiral);
+  letter-spacing: -0.03rem;
 }
 
 h1 {
   font-size: $h1-size;
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: $h1-size/2;
 }
 h2 {
   font-size: $h2-size;
-  line-height: 1.2;
+  line-height: 1;
   margin-bottom: $h2-size/2;
 }
 h3 {
   font-size: $h3-size;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 h4 {
   font-size: $h4-size;
@@ -54,11 +53,10 @@ h5 {
 }
 
 p {
-  color: $hull;
+  color: #666;
   font-size: 1rem;
-  line-height: 1.3;
+  line-height: 1.4;
   font-size: 1.125rem;
-  margin-bottom: 1rem;
 
   &.small {
     font-size: 0.9375rem;
@@ -80,8 +78,22 @@ p {
     line-height: 1.2;
   }
 }
+
+p + p {
+  margin-top: .5rem;
+}
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5 {
+  margin-top: .5rem;
+}
 em {
   font-style: italic;
+}
+.shadow {
+  text-shadow: 0 4px 32px rgba(0,0,0,0.80);
 }
 
 /*
@@ -98,7 +110,6 @@ body {
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include showBreaks;
 }
 
 body * {
@@ -107,7 +118,7 @@ body * {
 }
 
 a {
-  color: $hyperlink;
+  color: color(hyperlink);
   text-decoration: underline;
 }
 
@@ -125,28 +136,21 @@ a {
   }
 }
 
-img.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-img.cover {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .columns {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  padding: 1rem;
 
   @include respond-to(md) {
     flex-direction: row;
     grid-column: 2/12;
+    padding: 0;
+  }
+
+  &--center-items {
+    justify-content: center;
+    align-items: center;
   }
 
   &--pull-left {
@@ -161,10 +165,23 @@ img.cover {
       grid-column: 2/-1;
     }
   }
+  &--pack-tight {
+    justify-content: center;
+    margin: auto;
+  }
+  &--narrow {
+    justify-content: center;
+    @include respond-to(md) {
+      grid-column: 3/-3;
+    }
+  }
   &--reverse {
     @media screen and (max-width: 640px) {
       flex-direction: column-reverse;
     }
+  }
+  &--wrap {
+    flex-wrap: wrap;
   }
 }
 
@@ -173,24 +190,33 @@ img.cover {
   // flexbox will pack these automatically
   // into .columns
   flex: 1;
-  padding: 1rem;
 
   // these are specified width
   // flex items
   &--25 {
-    flex: 0 25%;
+    @include respond-to(md) {
+      flex: 0 25%;
+    }
   }
   &--50 {
-    flex: 0 50%;
+    @include respond-to(md) {
+      flex: 0 50%;
+    }
   }
   &--75 {
-    flex: 0 75%;
+    @include respond-to(md) {
+      flex: 0 75%;
+    }
   }
   &--33 {
-    flex: 0 33%;
+    @include respond-to(md) {
+      flex: 0 33.33%;
+    }
   }
   &--66 {
-    flex: 0 66%;
+    @include respond-to(md) {
+      flex: 0 66%;
+    }
   }
 
   // a column can also be
@@ -199,7 +225,6 @@ img.cover {
   // and orients it as a flex parent
 
   &--is-flex {
-    padding: 0;
     display: flex;
     flex-direction: column;
     @include respond-to(md) {
@@ -211,10 +236,8 @@ img.cover {
   // (2) and center its children vertically
   // and horizontally
   &--center-children {
-    padding: 0;
     display: flex;
     flex-direction: column;
-    align-content: center;
     justify-content: center;
   }
 
@@ -237,4 +260,21 @@ img.cover {
   @include respond-to(md) {
     grid-column: 1/13;
   }
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+img.cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+img.responsive {
+  width: 100%;
+  display: block;
 }

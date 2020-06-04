@@ -42,13 +42,13 @@ export default class Navigation extends Component {
         >
           <ul>
             <li>
-              <Link href="/company">
-                <a>Company</a>
+              <Link href="/platform">
+                <a>Platform</a>
               </Link>
             </li>
             <li>
-              <Link href="/platform">
-                <a>Platform</a>
+              <Link href="/company">
+                <a>Company</a>
               </Link>
             </li>
             <li>
@@ -82,13 +82,13 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/company">
-              <a>Company</a>
+            <Link href="/platform">
+              <a>Platform</a>
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/platform">
-              <a>Platform</a>
+            <Link href="/company">
+              <a>Company</a>
             </Link>
           </li>
           <li className={styles.autohide}>

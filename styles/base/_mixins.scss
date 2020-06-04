@@ -1,3 +1,5 @@
+@import "./config.scss";
+
 /*
 ###################################################
 # Resets
@@ -37,14 +39,6 @@
 # Responsive
 ###################################################
 */
-
-$breakpoints: (
-  null: 0,
-  sm: 640px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px,
-);
 
 @mixin sm-md {
   @media screen and (min-width: 641px) and (max-width: 768px) {
@@ -118,24 +112,8 @@ $breakpoints: (
 ###################################################
 */
 
-$theme-colors: (
-  "transparent": transparent,
-  "black": #444,
-  "white": #fff,
-  "coral": #fe7c69,
-  "admiral": #3b4868,
-  "scrub": #00d6b3,
-  "sky": #3391f3,
-  "hull": #767a84,
-  "midcentury": #e7cb69,
-  "funnies": #efceb9,
-  "belaire": #b0e0e6,
-  "fog": #f1f7f8,
-  "hyperlink": #005ec0,
-  "gray": #666,
-);
 
-@each $name, $value in $theme-colors {
+@each $name, $value in $colors {
   .color-#{$name} {
     color: $value;
   }
@@ -144,31 +122,21 @@ $theme-colors: (
   }
 }
 
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
 /*
 ###################################################
-# Type Utilities
+# Class Utilities
 ###################################################
 */
 
-$scale: (
-  8: 8px,
-  12: 12px,
-  15: 15px,
-  16: 16px,
-  18: 18px,
-  20: 20px,
-  24: 24px,
-  28: 28px,
-  32: 32px,
-);
-
-$heights: (
-  "i": inherit,
-  "s": 150%,
-  "m": 200%,
-  "l": 250%,
-  "xl": 300%,
-);
 
 .align-left {
   text-align: left;
@@ -179,6 +147,7 @@ $heights: (
 .align-center {
   text-align: center;
 }
+
 .hide-for-small {
   @media screen and (max-width: map-get($breakpoints, sm)) {
     display: none;
@@ -200,66 +169,43 @@ $heights: (
   }
 }
 
-// Margin classes
-.margin-medium {
-  margin: 2rem;
-}
-.margin-large {
-  margin: 4rem;
-}
-.margin-xlarge {
-  margin: 6rem;
-}
-
-.margin-y-medium {
-  margin: 2rem 0;
-}
-.margin-y-large {
-  margin: 4rem 0;
-}
-.margin-y-xlarge {
-  margin: 6rem 0;
-}
-
-.margin-x-medium {
-  margin: 0 2rem;
-}
-.margin-x-large {
-  margin: 0 4rem;
-}
-.margin-x-xlarge {
-  margin: 0 6rem;
-}
-
-// Padding classes
-.padding-medium {
-  padding: 2rem;
-}
-.padding-large {
-  padding: 4rem;
-}
-.padding-xlarge {
-  padding: 6rem;
-}
-
-.padding-y-medium {
-  padding: 2rem 0;
-}
-.padding-y-large {
-  padding: 4rem 0;
-}
-.padding-y-xlarge {
-  padding: 6rem 0;
-}
-
-.padding-x-medium {
-  padding: 0 2rem;
-}
-.padding-x-large {
-  padding: 0 4rem;
-}
-.padding-x-xlarge {
-  padding: 0 6rem;
+@each $name, $value in $sizes {
+  .margin-#{$name} {
+    margin: $value;
+  }
+  .margin-y-#{$name} {
+    margin: $value 0;
+  }
+  .margin-x-#{$name} {
+    margin: 0 $value;
+  }
+  .margin-bottom-#{$name} {
+    margin-bottom: $value;
+  }
+  .margin-top-#{$name} {
+    margin-top: $value;
+  }
+  .padding-#{$name} {
+    padding: $value;
+  }
+  .padding-y-#{$name} {
+    padding: $value 0;
+  }
+  .padding-x-#{$name} {
+    padding: 0 $value;
+  }
+  .padding-bottom-#{$name} {
+    padding-bottom: $value;
+  }
+  .padding-top-#{$name} {
+    padding-top: $value;
+  }
+  .padding-right-#{$name} {
+    padding-right: $value;
+  }
+  .padding-left-#{$name} {
+    padding-left: $value;
+  }
 }
 
 .no-pad {

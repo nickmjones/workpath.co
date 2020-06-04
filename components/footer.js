@@ -2,7 +2,7 @@ import styles from "../styles/modules/footer.module.scss";
 
 export default function Footer () {
   return(
-    <section class="breakout bgcolor-belaire padding-y-xlarge">
+    <section className="breakout bgcolor-belaire padding-y-xxlarge">
       <div className="columns">
         <div className="column">
           <ul>
@@ -13,7 +13,7 @@ export default function Footer () {
         </div>
 
         <div className="column column--is-flex">
-          <div className="column">
+          <div className="column margin-bottom-medium">
             <p className="large">Company</p>
             <ul>
               <li>Company</li>
@@ -22,7 +22,7 @@ export default function Footer () {
               <li>Blog</li>
             </ul>
           </div>
-          <div className="column">
+          <div className="column margin-bottom-medium">
             <p className="large">Resources</p>
             <ul>
               <li>Help</li>
@@ -31,7 +31,7 @@ export default function Footer () {
               <li>Terms of Service</li>
             </ul>
           </div>
-          <div className="column">
+          <div className="column margin-bottom-medium">
             <p className="large">Follow Us</p>
             <ul>
               <li>Twitter</li>
