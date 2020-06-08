@@ -5,6 +5,7 @@ import Button from "../components/button";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import styles from "../styles/modules/index.module.scss";
+import Fade from "react-reveal";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -48,57 +49,62 @@ export default class Home extends React.Component {
         </ul>
 
         <div className="columns margin-y-xlarge">
-          <h3>
-            Replace spreadsheets, 'where are you' texts, and piles of email with
-            Workpath.
-          </h3>
+          <div className="column">
+            <h4>
+              Replace spreadsheets, 'where are you' texts, and piles of email with
+              Workpath.
+            </h4>
+          </div>
         </div>
 
-        <section className="columns columns--pull-left">
-          <div className="column column--66 no-pad center-children">
-            <img
-              className="cover"
-              src="./images/routing.png"
-              alt="Right job, meet right team member"
-            />
-          </div>
-          <div className="column column--center-children">
-            <div className={styles.talker}>
-              <h5 className="text-admiral">
-                Right job, meet right team member.
-              </h5>
-              <p>
-                Stop playing matchmaker between jobs and team members. Workpath
-                automatically routes jobs to the person with the right skills.
-                No more texting “is this something you can do?”
-              </p>
-              <Button type="default" text="See all features" />
+        <Fade>
+          <section className="columns columns--pull-left">
+            <div className="column column--66 no-pad center-children">
+              <img
+                className="cover"
+                src="./images/routing.png"
+                alt="Right job, meet right team member"
+              />
             </div>
-          </div>
-        </section>
-
-        <section className="columns columns--pull-right columns--reverse">
-          <div className="column column--center-children">
-            <div className={styles.talker}>
-              <h5 className="text-admiral">
-                Real mobile health team management.
-              </h5>
-              <p>
-                Workpath is made for mobile—so you can dispatch, track, and
-                communicate with your team from anywhere. No more texting or
-                email threads.
-              </p>
-              <Button type="default" text="Get a Demo" />
+            <div className="column column--center-children">
+              <div className={styles.talker}>
+                <h5 className="text-admiral">
+                  Right job, meet right team member.
+                </h5>
+                <p>
+                  Stop playing matchmaker between jobs and team members. Workpath
+                  automatically routes jobs to the person with the right skills.
+                  No more texting “is this something you can do?”
+                </p>
+                <Button type="default" text="See all features" />
+              </div>
             </div>
-          </div>
-          <div className="column column--66 no-pad">
-            <img
-              className="cover"
-              src="./images/mobile.png"
-              alt="Real mobile health team management"
-            />
-          </div>
-        </section>
+          </section>
+        </Fade>
+        <Fade>
+          <section className="columns columns--pull-right columns--reverse">
+            <div className="column column--center-children">
+              <div className={styles.talker}>
+                <h5 className="text-admiral">
+                  Real mobile health team management.
+                </h5>
+                <p>
+                  Workpath is made for mobile—so you can dispatch, track, and
+                  communicate with your team from anywhere. No more texting or
+                  email threads.
+                </p>
+                <Button type="default" text="Get a Demo" />
+              </div>
+            </div>
+            <div className="column column--66 no-pad">
+              <img
+                className="cover"
+                src="./images/mobile.png"
+                alt="Real mobile health team management"
+              />
+            </div>
+          </section>
+        </Fade>
 
         <div className="columns margin-y-large">
           <div className="column align-right">
@@ -125,7 +131,7 @@ export default class Home extends React.Component {
             </div>
           </div>
           <div className="columns columns--wrap">
-            <div className="column column--75 column--spaced margin-top-medium margin-bottom-medium">
+            <div className="column column--75 margin-top-medium">
               <h4>
                 <span className="color-midcentury">
                 <VisibilitySensor
@@ -142,7 +148,7 @@ export default class Home extends React.Component {
               </h4>
             </div>
 
-            <div className="column column--75 column--spaced margin-bottom-medium">
+            <div className="column column--75">
               <h4>
                 <span className="color-scrub">
                 <VisibilitySensor
@@ -159,7 +165,7 @@ export default class Home extends React.Component {
               </h4>
             </div>
 
-            <div className="column column--75 column--spaced margin-bottom-medium">
+            <div className="column column--75">
               <h4>
                 <span className="color-quartz">
                 <VisibilitySensor
@@ -179,7 +185,7 @@ export default class Home extends React.Component {
         </div>
 
 
-        <div className="breakout white padding-y-xlarge">
+        <div className="breakout white padding-top-medium padding-bottom-large">
           <div className="columns">
             <div className="column align-center">
               <h5 className="padding-y-medium">

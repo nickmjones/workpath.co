@@ -43,28 +43,28 @@ export default class Navigation extends Component {
           <ul>
             <li>
               <Link href="/platform">
-                <a>Platform</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company">
-                <a>Company</a>
+                <a>platform</a>
               </Link>
             </li>
             <li>
               <Link href="/casestudies">
-                <a>Case Studies</a>
+                <a>case studies</a>
               </Link>
             </li>
             <li>
-              <a href="https://blog.workpath.co">Blog</a>
+              <Link href="/company">
+                <a>company</a>
+              </Link>
             </li>
             <li>
-              <a href="https://app.workpath.co">Log In</a>
+              <a href="https://blog.workpath.co">blog</a>
+            </li>
+            <li>
+              <a href="https://app.workpath.co">log in</a>
             </li>
             <li>
               <Link href="/contact">
-                <a>Get a Demo</a>
+                <a>get a demo</a>
               </Link>
             </li>
           </ul>
@@ -87,13 +87,13 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/company">
-              <a>Company</a>
+            <Link href="/casestudies">
+              <a>Case Studies</a>
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/casestudies">
-              <a>Case Studies</a>
+            <Link href="/company">
+              <a>Company</a>
             </Link>
           </li>
           <li className={styles.autohide}>

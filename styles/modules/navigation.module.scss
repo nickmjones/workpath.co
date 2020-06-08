@@ -27,7 +27,7 @@
   }
 
   ul {
-    margin-top: 10vh;
+    margin-top: 13vh;
   }
 
   ul li {
@@ -137,7 +137,7 @@ li.navigationLogo {
   display: flex;
   flex-flow: row wrap;
   align-content: center;
-  padding-top: 6px;
+  padding-top: 2px;
 }
 .navigation li.autohide {
   @extend .hide-for-small;

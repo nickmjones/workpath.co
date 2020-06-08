@@ -1,26 +1,11 @@
-<svg
-            width="20"
-            height="18"
-            viewBox="0 0 20 18"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M19.8 4H0V0H19.8V4Z"
-              fill="#495057"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M19.8 11H0V7H19.8V11Z"
-              fill="#495057"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M19.8 18H0V14H19.8V18Z"
-              fill="#495057"
-            />
-          </svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval" fill="#495057" cx="9" cy="2" r="2"></circle>
+        <circle id="Oval-Copy" fill="#495057" cx="9" cy="9" r="2"></circle>
+        <circle id="Oval-Copy-2" fill="#495057" cx="9" cy="16" r="2"></circle>
+    </g>
+</svg>

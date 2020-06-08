@@ -16,6 +16,7 @@
 - https://stackoverflow.com/questions/51044090/react-countup-animation-starts-immediately-after-the-page-loading-should-start/51045182
 - https://buttercms.com/blog/how-to-test-nextjs-apps#installingcypress
 - https://webdesign.tutsplus.com/tutorials/an-introduction-to-sass-maps-usage-and-examples--cms-22184
+- https://www.sitepoint.com/using-sass-maps/
 
 ---
 
