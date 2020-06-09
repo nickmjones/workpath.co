@@ -71,7 +71,7 @@ export default class Home extends React.Component {
                 <h5 className="text-admiral">
                   Right job, meet right team member.
                 </h5>
-                <p>
+                <p className="large">
                   Stop playing matchmaker between jobs and team members. Workpath
                   automatically routes jobs to the person with the right skills.
                   No more texting “is this something you can do?”
@@ -88,7 +88,7 @@ export default class Home extends React.Component {
                 <h5 className="text-admiral">
                   Real mobile health team management.
                 </h5>
-                <p>
+                <p className="large">
                   Workpath is made for mobile—so you can dispatch, track, and
                   communicate with your team from anywhere. No more texting or
                   email threads.

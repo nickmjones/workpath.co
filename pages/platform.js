@@ -225,7 +225,7 @@ export default function Platform() {
       </div>
 
       <div className="columns margin-bottom-large">
-        <h4 className="color-quartz align-center">
+        <h4 className="align-center display">
           Reclaim your work from texts and emails. Get back to caring for your
           patients. That’s Workpath.
         </h4>
