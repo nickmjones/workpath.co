@@ -18,13 +18,13 @@ class Hamburger extends React.Component {
     if (this.state.isCloseButton === true) {
       return (
         <span className="symbol" onClick={this.handleButtonClick}>
-          <img src="./images/close.svg" />
+          <img src="/close.svg" />
         </span>
       );
     } else {
       return (
         <span className="symbol" onClick={this.handleButtonClick}>
-          <img src="./images/hamburger.svg" />
+          <img src="/hamburger.svg" />
         </span>
       );
     }

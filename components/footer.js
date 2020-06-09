@@ -6,7 +6,7 @@ export default function Footer () {
       <div className="columns">
         <div className="column">
           <ul>
-            <li><img src="./images/wp_logo.svg"/></li>
+            <li><img src="/wp_logo.svg"/></li>
             <li>Copyright &copy; 2020 Workpath</li>
             <li>All rights reserved</li>
           </ul>

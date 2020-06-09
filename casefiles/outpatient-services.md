@@ -1,6 +1,14 @@
 ---
 title: Workpath for outpatient services
 intro: Memorial Sloan Kettering Cancer Center improved patient experience by implementing at-home phlebotomy appointments.
+stats_intro: MSK realized dramatic improvements in day-to-day operations, resulting in better patient experiences and organizational cost savings.
+stats: [
+  "100% Patient satisfaction rating",
+  "100% Percentage of patients who reported they would refer the Workpath model to a friend",
+  "120 Projected net increase in patients per day due to optimized throughput.",
+  "$2mm Projected combined cost savings and increased revenue exceeds per annum"
+]
+image: usecase_outpatient.jpg
 ---
 
 
