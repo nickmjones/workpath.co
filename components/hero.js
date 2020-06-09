@@ -10,7 +10,7 @@ class Hero extends React.Component {
         <div className={styles.heroHeadline}>
           <h1 className="display">The only dispatch platform for mobile healthcare services.</h1>
           <div className={styles.actions}>
-            <Link href="/contact">
+            <Link href="/demo">
               <a>
                 <Button type="ghost" text="Get Started Free" />
               </a>

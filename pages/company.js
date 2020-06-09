@@ -101,7 +101,7 @@ export default function Company() {
 
       <div className="columns">
         <div className="column padding-right-medium">
-          <p>
+          <p className="large">
             Today, a wide variety of mobile healthcare companies leverage
             Workpath’s HIPAA-compliant platform to cut costs, ensure compliance,
             and improve patient satisfaction. Services as diverse as in-home
@@ -110,7 +110,7 @@ export default function Company() {
           </p>
         </div>
         <div className="column padding-right-medium">
-          <p>
+          <p className="large">
             For tomorrow, as patient demands continue to push the healthcare
             industry to decentralize, Workpath is partnering with innovative
             companies to make a patient-centric future seamless. With Workpath’s

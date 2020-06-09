@@ -57,7 +57,7 @@ export default function Platform() {
           <div className="columns">
             <div className="column column--center-children padding-medium">
               <p className="large color-quartz">
-                <img src="./images/icon-time.svg" /> 6:19 am - Before the first appointment
+                6:19 am - Before the first appointment
               </p>
               <p className="large">
                 Workpath’s simple ordering portal makes it easy for your customers
@@ -112,7 +112,7 @@ export default function Platform() {
           <div className="columns">
             <div className="column padding-medium">
               <p className="large color-quartz">
-                <img src="./images/icon-time.svg" /> 11:18 am - Three appointments down
+                11:18 am - Three appointments down
               </p>
               <p className="large">
                 Workpath is with your team in the field all day. It puts notes and
@@ -168,7 +168,7 @@ export default function Platform() {
           <div className="columns">
             <div className="column column--center-children padding-medium">
               <p className="large color-quartz">
-                <img src="./images/icon-time.svg" /> 5:41 pm - Last appointment of the day
+                5:41 pm - Last appointment of the day
               </p>
               <p className="large">
                 Even though members of your team might be done for the day, Workpath
