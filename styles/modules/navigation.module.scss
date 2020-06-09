@@ -86,6 +86,10 @@ li.navigationLogo {
   display: flex;
   align-content: center;
   margin-right: auto;
+  
+  a {
+    border: 0 !important;
+  }
 
   img {
     height: 100%;
@@ -101,6 +105,7 @@ li.navigationLogo {
   a {
     color: color(coal);
     text-decoration: none;
+    border-bottom: 2px solid color(coal);
   }
   a:visited {
     color: color(coal);
@@ -132,6 +137,7 @@ li.navigationLogo {
   text-decoration: none;
   padding: 0.5rem 1rem;
   border-radius: 100px;
+  border: none;
 }
 .navigation li.hamburger {
   display: flex;

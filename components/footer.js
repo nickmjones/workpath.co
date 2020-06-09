@@ -1,5 +1,3 @@
-import styles from "../styles/modules/footer.module.scss";
-
 export default function Footer () {
   return(
     <section className="breakout bgcolor-belaire padding-y-xxlarge">

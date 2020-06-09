@@ -63,7 +63,7 @@ export default class Navigation extends Component {
               <a href="https://app.workpath.co">log in</a>
             </li>
             <li>
-              <Link href="/contact">
+              <Link href="/demo">
                 <a>get a demo</a>
               </Link>
             </li>
@@ -104,7 +104,7 @@ export default class Navigation extends Component {
             <a href="https://app.workpath.co">Log In</a>
           </li>
           <li className={`${styles.special} ${styles.autohide}`}>
-            <Link href="/contact">
+            <Link href="/demo">
               <a>Get a Demo</a>
             </Link>
           </li>
