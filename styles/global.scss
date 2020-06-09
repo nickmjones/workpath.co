@@ -17,31 +17,17 @@
 # Fonts
 ###################################################
 */
-@font-face {
-  font-family: "Tiempos Headline";
-  font-weight: 400;
-  src: url("./fonts/TiemposHeadline-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: "Circular Book";
-  font-weight: 200;
-  src: url("./fonts/lineto-circular-pro-book.woff") format("woff");
-}
-@font-face {
-  font-family: "Circular Bold";
-  font-weight: 200;
-  src: url("./fonts/lineto-circular-pro-bold.woff") format("woff");
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: $font-display;
+  font-family: $font-body;
   color: color(admiral);
   letter-spacing: -0.03rem;
+  font-weight: 700;
 }
 
 h1 {
@@ -69,8 +55,12 @@ h5 {
   margin-bottom: $h5-size/3;
 }
 
+.display {
+  font-family: $font-display;
+}
+
 p {
-  color: #666;
+  color: #444;
   font-size: 1rem;
   line-height: 1.5;
 
@@ -122,6 +112,13 @@ blockquote {
   line-height: 1.4;
   margin: 2rem 0;
   border-left: 1px solid color(scrub);
+}
+ul.generic {
+  margin-left: 1rem;
+}
+ul.generic li {
+  font-size: $p-size;
+  margin: 1rem 0;
 }
 
 /*
@@ -315,4 +312,8 @@ img.responsive {
 .fade-in {
   animation: fadein 1.2s;
   animation-fill-mode: backwards;
+}
+
+figure p + p {
+  margin: 0;
 }

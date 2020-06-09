@@ -22,7 +22,7 @@ export default function Platform() {
         <div className="columns margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
             <p className="large color-belaire">How It Works</p>
-            <h4 className="color-fog shadow">
+            <h4 className="color-fog shadow display">
               Run your team from just one app. Eliminate distractions, simplify
               processes, and delight patients. Yes, really.
             </h4>
@@ -97,7 +97,7 @@ export default function Platform() {
       >
         <div className="columns">
           <div className="column column--50">
-            <h4 className="color-fog">
+            <h4 className="color-fog display">
               Workpath routes, communicates, plans, and administrates—so you can
               provide care.
             </h4>

@@ -8,7 +8,7 @@ class Hero extends React.Component {
     return (
       <header className={styles.hero}>
         <div className={styles.heroHeadline}>
-          <h1>The only dispatch platform for mobile healthcare services.</h1>
+          <h1 className="display">The only dispatch platform for mobile healthcare services.</h1>
           <div className={styles.actions}>
             <Link href="/contact">
               <a>

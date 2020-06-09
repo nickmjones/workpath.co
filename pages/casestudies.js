@@ -20,7 +20,7 @@ export default function Casestudies() {
         <div className="columns columns--pull-right margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
             <p className="large color-belaire">Case Studies</p>
-            <h4 className="color-fog shadow">
+            <h4 className="color-fog shadow display">
               Companies that use Workpath are at the forefront of on-demand, all-mobile healthcare. Here's how we do it, together. Let's blaze a trail.
             </h4>
           </div>

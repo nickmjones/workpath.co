@@ -43,7 +43,7 @@ export default function BlogTemplate({ frontmatter, markdownBody }) {
           <div className="columns margin-y-xlarge fade-in">
             <div className="column column--66 column--center-children">
               <p className="large color-quartz">Case Studies</p>
-              <h4 className="color-fog shadow">{frontmatter.title}</h4>
+              <h4 className="color-fog shadow display">{frontmatter.title}</h4>
             </div>
           </div>
         </section>
@@ -62,7 +62,7 @@ export default function BlogTemplate({ frontmatter, markdownBody }) {
           <div className="columns margin-y-xlarge fade-in">
             <div className="column column--66 column--center-children">
               <p className="large color-quartz">Case Studies</p>
-              <h4 className="color-fog shadow">{frontmatter.title}</h4>
+              <h4 className="color-fog shadow display">{frontmatter.title}</h4>
             </div>
           </div>
         </section>

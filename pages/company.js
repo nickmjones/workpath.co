@@ -21,10 +21,8 @@ export default function Company() {
         <div className="columns margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
             <p className="large color-belaire">About Us</p>
-            <h4 className="color-fog shadow">
-              At Workpath, our whole team is focused on one mission—building the
-              technology needed to deliver healthcare to patients when and where
-              they need it most.
+            <h4 className="color-fog shadow display">
+              One mission&mdash;building the technology needed to deliver healthcare to patients when and where they need it most.
             </h4>
           </div>
         </div>
@@ -124,62 +122,62 @@ export default function Company() {
         </div>
       </div>
 
-      <div className="columns columns--center-items columns--wrap margin-y-xlarge">
-        <div className="column column--33 align-center padding-bottom-medium">
+      <div className="columns columns--center-items columns--wrap margifigure-xlarge">
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/eddie.png" />
           <p>Eddie Peloke</p>
           <p className="small color-quartz">CEO</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/baylee.png" />
           <p>Baylee Mabe</p>
           <p className="small color-quartz">Head of Product</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/hunter.png" />
           <p>Hunter Bynes</p>
           <p className="small color-quartz">Business Development</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/luke.png" />
           <p>Luke Atwood</p>
           <p className="small color-quartz">Business Development</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/mitchell.png" />
           <p>Mitchell Murray</p>
           <p className="small color-quartz">Business Development</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/ryan.png" />
           <p>Ryan Stimmler</p>
           <p className="small color-quartz">Developer</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/jeremy.png" />
           <p>Jeremy Remington</p>
           <p className="small color-quartz">IT Infrastructure Specialist</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/elliott.png" />
           <p>Elliott Pogue</p>
           <p className="small color-quartz">Developer</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/louie.png" />
           <p>Louie Cheung</p>
           <p className="small color-quartz">Developer</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/justin.png" />
           <p>Justin Rutherford</p>
           <p className="small color-quartz">Developer</p>
-        </div>
-        <div className="column column--33 align-center padding-bottom-medium">
+        </figure>
+        <figure className="column column--33 align-center padding-bottom-medium">
           <img className={styles.avatar} src="./images/team/emily.png" />
           <p>Emily Murphy</p>
           <p className="small color-quartz">Developer</p>
-        </div>
+        </figure>
       </div>
     </>
   );
