@@ -78,7 +78,7 @@ export default class Navigation extends Component {
         <ul className={ this.state.isAtPageTop ? `${styles.navigation}` : `${styles.navigationShadow}` } role="navigation">
           <li className={styles.navigationLogo}>
             <Link href="/">
-              <a><img src="/wp_logo.svg" alt="Workpath logo" /></a>
+              <a><img src="/wp_logo.svg" width="140px" alt="Workpath logo" /></a>
             </Link>
           </li>
           <li className={styles.autohide}>
