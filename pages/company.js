@@ -10,18 +10,12 @@ export default function Company() {
       </Head>
 
       <section 
-        className="breakout breakout--is-header bgcolor-coal margin-bottom-large"
-        style={{
-          backgroundImage: "url(" + "./images/hero_company.jpg" + ")",
-          backgroundPosition: "0 0",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="breakout breakout--is-header bgcolor-fog margin-bottom-large"
       >
         <div className="columns margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
-            <p className="large color-quartz">About Us</p>
-            <h4 className="color-fog shadow display">
+            <p className="large color-quartz">Company/About Us</p>
+            <h4 className="color-admiral">
               One mission&mdash;building the technology needed to deliver healthcare to patients when and where they need it most.
             </h4>
           </div>

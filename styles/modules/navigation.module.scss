@@ -79,7 +79,7 @@
 }
 .navigationShadow {
   composes: navigation;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid color(coal);
 }
 
 li.navigationLogo {

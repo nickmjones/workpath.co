@@ -9,18 +9,12 @@ export default function Casestudies() {
         <title>workpath.co | Case studies</title>
       </Head>
       <section
-        className="breakout breakout--is-header bgcolor-scrub margin-bottom-large"
-        style={{
-          backgroundImage: "url(" + "./images/hero_cases.jpg" + ")",
-          backgroundPosition: "0 0",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="breakout breakout--is-header bgcolor-fog margin-bottom-large"
       >
         <div className="columns columns--pull-right margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
-            <p className="large color-belaire">Case Studies</p>
-            <h4 className="color-fog shadow display">
+            <p className="large color-quartz">Case Studies</p>
+            <h4 className="color-admiral">
               Companies that use Workpath are at the forefront of on-demand, all-mobile healthcare. Here's how we do it, together. Let's blaze a trail.
             </h4>
           </div>

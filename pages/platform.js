@@ -11,18 +11,12 @@ export default function Platform() {
       {/* Hero */}
 
       <section
-        className="breakout breakout--is-header bgcolor-coal margin-bottom-large"
-        style={{
-          backgroundImage: "url(" + "./images/hero_platform.jpg" + ")",
-          backgroundPosition: "0 0",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
+        className="breakout breakout--is-header bgcolor-fog margin-bottom-large"
       >
         <div className="columns margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
-            <p className="large color-belaire">How It Works</p>
-            <h4 className="color-fog shadow display">
+            <p className="large color-quartz">Platform/How It Works</p>
+            <h4 className="color-admiral">
               Run your team from just one app. Eliminate distractions, simplify
               processes, and delight patients. Yes, really.
             </h4>

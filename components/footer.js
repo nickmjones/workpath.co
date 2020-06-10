@@ -1,10 +1,12 @@
-export default function Footer () {
-  return(
+export default function Footer() {
+  return (
     <section className="breakout bgcolor-belaire padding-y-xxlarge">
       <div className="columns">
         <div className="column">
           <ul>
-            <li><img src="/wp_logo.svg" width="240px" alt="Workpath logo" /></li>
+            <li>
+              <img src="/wp_logo.svg" width="240px" alt="Workpath logo" />
+            </li>
             <li>Copyright &copy; 2020 Workpath</li>
             <li>All rights reserved</li>
           </ul>
@@ -32,7 +34,11 @@ export default function Footer () {
           <div className="column margin-bottom-medium">
             <p className="large">Follow Us</p>
             <ul className="margin-top-small">
-              <li>LinkedIn</li>
+              <li>
+                <a href="https://www.linkedin.com/company/workpathco/">
+                  LinkedIn
+                </a>
+              </li>
               <li>Join the mailing list</li>
             </ul>
           </div>
