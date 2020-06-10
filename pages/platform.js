@@ -78,7 +78,7 @@ export default function Platform() {
               </p>
             </div>
             <div className="column">
-              <img className="responsive" src="./images/day_start.svg" />
+              <img className="responsive" src="./images/day_start.png" />
             </div>
           </div>
         </section>
@@ -123,7 +123,7 @@ export default function Platform() {
 
               <div className="margin-top-small">
                 <img
-                  src="./images/ui.svg"
+                  src="./images/ui.png"
                   width="100%"
                   alt="User interface showing a nurse on his way."
                 />
@@ -141,7 +141,7 @@ export default function Platform() {
               </p>
             </div>
             <div className="column">
-              <img className="responsive" src="./images/day_middle.svg" />
+              <img className="responsive" src="./images/day_middle.png" />
             </div>
           </div>
         </section>
@@ -187,7 +187,7 @@ export default function Platform() {
               </p>
             </div>
             <div className="column">
-              <img className="responsive" src="./images/day_end.svg" />
+              <img className="responsive" src="./images/day_end.png" />
             </div>
           </div>
         </section>
