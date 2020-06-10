@@ -32,9 +32,8 @@ export default function Footer () {
           <div className="column margin-bottom-medium">
             <p className="large">Follow Us</p>
             <ul className="margin-top-small">
-              <li>Twitter</li>
               <li>LinkedIn</li>
-              <li>Instagram</li>
+              <li>Join the mailing list</li>
             </ul>
           </div>
         </div>

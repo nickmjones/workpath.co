@@ -226,7 +226,7 @@ export default function Platform() {
 
       <div className="columns margin-bottom-large">
         <h4 className="align-center display">
-          Reclaim your work from texts and emails. Get back to caring for your
+          Reclaim your work from texts and emails. Make your team's working hours count. Get back to caring for your
           patients. That’s Workpath.
         </h4>
       </div>

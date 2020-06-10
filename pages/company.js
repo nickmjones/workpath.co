@@ -20,7 +20,7 @@ export default function Company() {
       >
         <div className="columns margin-y-xlarge fade-in">
           <div className="column column--66 column--center-children">
-            <p className="large color-belaire">About Us</p>
+            <p className="large color-quartz">About Us</p>
             <h4 className="color-fog shadow display">
               One mission&mdash;building the technology needed to deliver healthcare to patients when and where they need it most.
             </h4>
@@ -30,13 +30,36 @@ export default function Company() {
       
       {/* Intro */}
 
+      <div className="columns">
+        <div className="column padding-right-medium">
+          <p className="large">
+            Today, a wide variety of mobile healthcare companies leverage
+            Workpath’s HIPAA-compliant platform to cut costs, ensure compliance,
+            and improve patient satisfaction. Services as diverse as in-home
+            primary care, on-demand diagnostic imaging, and mobile paramedical
+            insurance exams, among others, rely on Workpath.
+          </p>
+        </div>
+        <div className="column padding-right-medium">
+          <p className="large">
+            For tomorrow, as patient demands continue to push the healthcare
+            industry to decentralize, Workpath is partnering with innovative
+            companies to make a patient-centric future seamless. With Workpath’s
+            technology, a day where a patient has blood drawn at their place of
+            work, receives a nurse visit at their home, and has their
+            prescription delivered to their front door while tracking its
+            progress on their smartphone, is within reach.
+          </p>
+        </div>
+      </div>
+
       <Fade>
-        <div className="columns margin-y-xxlarge">
+        <div className="columns margin-y-xlarge">
           <div className="column column--66">
-            <p className="large">
+            <h5>
               We're purpose driven. We come to the table with a set of <span className="color-quartz"> core values</span> that drive
               everything we do. Our software enables mobile healthcare services to schedule or dispatch on-demand the right professional to perform the right care at the right time and place.
-            </p>
+            </h5>
           </div>
         </div>
 
@@ -98,29 +121,6 @@ export default function Company() {
           </div>
         </div>
       </Fade>
-
-      <div className="columns">
-        <div className="column padding-right-medium">
-          <p className="large">
-            Today, a wide variety of mobile healthcare companies leverage
-            Workpath’s HIPAA-compliant platform to cut costs, ensure compliance,
-            and improve patient satisfaction. Services as diverse as in-home
-            primary care, on-demand diagnostic imaging, and mobile paramedical
-            insurance exams, among others, rely on Workpath.
-          </p>
-        </div>
-        <div className="column padding-right-medium">
-          <p className="large">
-            For tomorrow, as patient demands continue to push the healthcare
-            industry to decentralize, Workpath is partnering with innovative
-            companies to make a patient-centric future seamless. With Workpath’s
-            technology, a day where a patient has blood drawn at their place of
-            work, receives a nurse visit at their home, and has their
-            prescription delivered to their front door while tracking its
-            progress on their smartphone, is within reach.
-          </p>
-        </div>
-      </div>
 
       <div className="columns columns--center-items columns--wrap margifigure-xlarge">
         <figure className="column column--33 align-center padding-bottom-medium">

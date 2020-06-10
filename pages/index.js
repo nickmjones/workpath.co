@@ -30,22 +30,18 @@ export default class Home extends React.Component {
 
         <Hero />
 
-        <ul className="columns">
-          <li className="column column--center-children margin-y-medium">
-            <img src="./images/superhuman.svg" alt="Superhuman" />
+        <ul className="columns margin-y-small">
+          <li className="column column--center-children"></li>
+          <li className="column column--center-children">
+            <img src="./images/healthineers.png" className="responsive" alt="Siemens Healthineers" />
           </li>
           <li className="column column--center-children margin-y-medium">
-            <img src="./images/eyeem.svg" alt="Superhuman" />
+            <img src="./images/vault.png" className="responsive" alt="Vault Health" />
           </li>
           <li className="column column--center-children margin-y-medium">
-            <img src="./images/chartmogul.svg" alt="Superhuman" />
+            <img src="./images/phlebotek.png" className="responsive" alt="Phlebotek" />
           </li>
-          <li className="column column--center-children margin-y-medium">
-            <img src="./images/notion.svg" alt="Superhuman" />
-          </li>
-          <li className="column column--center-children margin-y-medium">
-            <img src="./images/dashdash.svg" alt="Superhuman" />
-          </li>
+          <li className="column column--center-children"></li>
         </ul>
 
         <div className="columns margin-y-xlarge">
@@ -133,7 +129,7 @@ export default class Home extends React.Component {
           <div className="columns columns--wrap">
             <div className="column column--75 margin-top-medium">
               <h4>
-                <span className="color-midcentury">
+                <span className="number-holder color-midcentury">
                 <VisibilitySensor
                   onChange={this.onVisibilityChange}
                   delayedCall
@@ -150,7 +146,7 @@ export default class Home extends React.Component {
 
             <div className="column column--75">
               <h4>
-                <span className="color-scrub">
+                <span className="number-holder color-scrub">
                 <VisibilitySensor
                   onChange={this.onVisibilityChange}
                   delayedCall
@@ -167,7 +163,7 @@ export default class Home extends React.Component {
 
             <div className="column column--75">
               <h4>
-                <span className="color-quartz">
+                <span className="number-holder color-quartz">
                 <VisibilitySensor
                   onChange={this.onVisibilityChange}
                   delayedCall
