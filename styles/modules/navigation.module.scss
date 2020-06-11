@@ -7,7 +7,7 @@
   text-align: center;
   font-size: 1.125rem;
   height: 4rem;
-  line-height: 3.5rem;
+  line-height: 4rem;
   z-index: 999;
 }
 
@@ -65,21 +65,13 @@
 
 .navigation {
   height: $height-navigation;
-  padding: 0 1rem;
+  padding: 0 4rem 0 1rem;
   list-style: none;
   display: flex;
   align-items: center;
   grid-column: 1/13;
-  position: sticky;
   z-index: 999;
-  top: 0;
-  background: white;
-  margin: -0.5rem 0 0;
   @include animate(0.3s, ease-in-out);
-}
-.navigationShadow {
-  composes: navigation;
-  border-bottom: 1px solid color(coal);
 }
 
 li.navigationLogo {
@@ -150,4 +142,10 @@ li.navigationLogo {
   @extend .hide-for-small;
   @extend .hide-for-medium;
   @extend .hide-for-large;
+}
+.trigger {
+  position: fixed;
+  top: 5.78rem;
+  right: 1.75rem;
+  z-index: 9999;
 }

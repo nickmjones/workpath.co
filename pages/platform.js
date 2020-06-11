@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "../components/hero";
 import Fade from "react-reveal";
 
 export default function Platform() {
@@ -8,23 +9,12 @@ export default function Platform() {
         <title>workpath.co | How it works</title>
       </Head>
 
-      {/* Hero */}
-
-      <section
-        className="breakout breakout--is-header bgcolor-fog margin-bottom-large"
-      >
-        <div className="columns margin-y-xlarge fade-in">
-          <div className="column column--66 column--center-children">
-            <p className="large color-quartz">Platform/How It Works</p>
-            <h4 className="color-admiral">
-              Run your team from just one app. Eliminate distractions, simplify
-              processes, and delight patients. Yes, really.
-            </h4>
-          </div>
-        </div>
-      </section>
-      
-      {/* Intro */}
+      <Hero
+        section="Platform"
+        headline="Eliminate distractions, simplify processes, and delight patients with just one app."
+        image="hero_platform@2x.png"
+      />
+    
 
       <div className="columns margin-top-large margin-bottom-xlarge">
         <div className="column column--66">
@@ -91,10 +81,10 @@ export default function Platform() {
       >
         <div className="columns">
           <div className="column column--50">
-            <h4 className="color-fog display">
+            <h5 className="color-fog display">
               Workpath routes, communicates, plans, and administrates—so you can
               provide care.
-            </h4>
+            </h5>
           </div>
         </div>
       </section>
@@ -219,10 +209,10 @@ export default function Platform() {
       </div>
 
       <div className="columns margin-bottom-large">
-        <h4 className="align-center display">
+        <h5 className="align-center">
           Reclaim your work from texts and emails. Make your team's working hours count. Get back to caring for your
           patients. That’s Workpath.
-        </h4>
+        </h5>
       </div>
     </>
   );

@@ -28,7 +28,6 @@ h5 {
   font-family: $font-display;
   color: color(admiral);
   letter-spacing: -0.04rem;
-  font-weight: 700;
 }
 
 h1 {
@@ -43,7 +42,7 @@ h2 {
 }
 h3 {
   font-size: $h3-size;
-  line-height: 1.2;
+  line-height: 1.1;
 }
 h4 {
   font-size: $h4-size;
@@ -276,6 +275,13 @@ a {
 
   &--is-header {
     height: calc(100vh - 8rem);
+
+    h3 {
+      font-size: $h5-size;
+      @include respond-to(md) {
+        font-size: $h3-size;
+      }
+    }
   }
 }
 
@@ -307,4 +313,56 @@ figure p + p {
 
 .number-holder {
   display: block;
+}
+
+.hero {
+  grid-column: 1 / -1;
+  padding: 2rem;
+  background-color: color(scrub);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  min-height: calc(100vh - 10rem);
+
+  @include respond-to(md) {
+    background-color: white;
+    padding: 2rem 10vw;
+  }
+
+  .caption {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 10;
+    flex-direction: column;
+
+    h3 {
+      font-size: 4vw;
+      margin-bottom: 1.1rem;
+      line-height: 1.2;
+      font-family: $font-display;
+    }
+
+    @include respond-to(md) {
+      grid-column: 1 / 4;
+      grid-row: 1 / -1;
+      font-size: 4vw;
+    }
+  }
+  .image {
+    display: none;
+    z-index: 8;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to(md) {
+      display: flex;
+      grid-column: 3 / -1;
+      grid-row: 1 / -1;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
 }

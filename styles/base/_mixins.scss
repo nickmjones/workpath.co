@@ -150,22 +150,22 @@
 
 .hide-for-small {
   @media screen and (max-width: map-get($breakpoints, sm)) {
-    display: none;
+    display: none !important;
   }
 }
 .hide-for-medium {
   @media screen and (max-width: map-get($breakpoints, md)) {
-    display: none;
+    display: none !important;
   }
 }
 .hide-for-large {
   @media screen and (max-width: map-get($breakpoints, lg)) {
-    display: none;
+    display: none !important;
   }
 }
 .hide-for-xlarge {
   @media screen and (max-width: map-get($breakpoints, xl)) {
-    display: none;
+    display: none !important;
   }
 }
 

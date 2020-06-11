@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Fade from "react-reveal";
 import styles from "../styles/modules/company.module.scss";
+import Hero from "../components/hero";
+
 
 export default function Company() {
   return (
@@ -9,18 +11,11 @@ export default function Company() {
         <title>workpath.co | About us</title>
       </Head>
 
-      <section 
-        className="breakout breakout--is-header bgcolor-fog margin-bottom-large"
-      >
-        <div className="columns margin-y-xlarge fade-in">
-          <div className="column column--66 column--center-children">
-            <p className="large color-quartz">Company/About Us</p>
-            <h4 className="color-admiral">
-              One mission&mdash;building the technology needed to deliver healthcare to patients when and where they need it most.
-            </h4>
-          </div>
-        </div>
-      </section>
+      <Hero
+        section="Company"
+        headline="Enabling healthcare where and when it's needed most."
+        image="hero_company@2x.png"
+      />
       
       {/* Intro */}
 

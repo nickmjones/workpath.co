@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Button from "../components/button";
+import Hero from "../components/hero";
 
 export default function Casestudies() {
   return (
@@ -8,18 +9,12 @@ export default function Casestudies() {
       <Head>
         <title>workpath.co | Case studies</title>
       </Head>
-      <section
-        className="breakout breakout--is-header bgcolor-fog margin-bottom-large"
-      >
-        <div className="columns columns--pull-right margin-y-xlarge fade-in">
-          <div className="column column--66 column--center-children">
-            <p className="large color-quartz">Case Studies</p>
-            <h4 className="color-admiral">
-              Companies that use Workpath are at the forefront of on-demand, all-mobile healthcare. Here's how we do it, together. Let's blaze a trail.
-            </h4>
-          </div>
-        </div>
-      </section>
+
+      <Hero
+        section="Case Studies"
+        headline="At the forefront of on-demand healthcare. Let's blaze a trail."
+        image="hero_cases@2x.png"
+      />
 
       <div className="columns columns--wrap margin-bottom-large">
         <div className="column column--50 margin-y-small">

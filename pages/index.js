@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import Head from "next/head";
+import Link from "next/link";
 import Hero from "../components/hero";
 import Button from "../components/button";
 import CountUp from "react-countup";
@@ -28,18 +29,34 @@ export default class Home extends React.Component {
           <title>workpath.co | Home</title>
         </Head>
 
-        <Hero />
+        <Hero
+          headline="The only dispatch platform for mobile healthcare services."
+          subhed="Manage your mobile team, win more work, and dramatically improve patient experience."
+          image="hero_index@2x.png"
+        />
 
         <ul className="columns margin-y-small">
           <li className="column column--center-children"></li>
           <li className="column column--center-children">
-            <img src="./images/healthineers.png" className="responsive" alt="Siemens Healthineers" />
+            <img
+              src="./images/healthineers.png"
+              className="responsive"
+              alt="Siemens Healthineers"
+            />
           </li>
           <li className="column column--center-children margin-y-medium">
-            <img src="./images/vault.png" className="responsive" alt="Vault Health" />
+            <img
+              src="./images/vault.png"
+              className="responsive"
+              alt="Vault Health"
+            />
           </li>
           <li className="column column--center-children margin-y-medium">
-            <img src="./images/phlebotek.png" className="responsive" alt="Phlebotek" />
+            <img
+              src="./images/phlebotek.png"
+              className="responsive"
+              alt="Phlebotek"
+            />
           </li>
           <li className="column column--center-children"></li>
         </ul>
@@ -47,8 +64,8 @@ export default class Home extends React.Component {
         <div className="columns margin-y-xlarge">
           <div className="column">
             <h4>
-              Replace spreadsheets, 'where are you' texts, and piles of email with
-              Workpath.
+              Replace spreadsheets, 'where are you' texts, and piles of email
+              with Workpath.
             </h4>
           </div>
         </div>
@@ -68,11 +85,15 @@ export default class Home extends React.Component {
                   Right job, meet right team member.
                 </h5>
                 <p className="large">
-                  Stop playing matchmaker between jobs and team members. Workpath
-                  automatically routes jobs to the person with the right skills.
-                  No more texting “is this something you can do?”
+                  Stop playing matchmaker between jobs and team members.
+                  Workpath automatically routes jobs to the person with the
+                  right skills. No more texting “is this something you can do?”
                 </p>
-                <Button type="default" text="See all features" />
+                <Link href="/platform">
+                  <a>
+                    <Button type="default" text="See all features" />
+                  </a>
+                </Link>
               </div>
             </div>
           </section>
@@ -89,7 +110,11 @@ export default class Home extends React.Component {
                   communicate with your team from anywhere. No more texting or
                   email threads.
                 </p>
-                <Button type="default" text="Get a Demo" />
+                <Link href="/demo">
+                  <a>
+                    <Button type="default" text="Get a demo" />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="column column--66 no-pad">
@@ -116,13 +141,11 @@ export default class Home extends React.Component {
         <div className="breakout bgcolor-fog padding-y-xlarge">
           <div className="columns">
             <div className="column column--75 column--spaced margin-top-medium margin-bottom-medium">
-              <h4>
-                Just like your patients, we know you want results.
-              </h4>
+              <h4>Just like your patients, we know you want results.</h4>
               <p className="large">
-                Businesses that move to Workpath grow the good numbers and shrink
-                the not so good. You also gain a partner in streamlining your
-                workflow and winning more work.
+                Businesses that move to Workpath grow the good numbers and
+                shrink the not so good. You also gain a partner in streamlining
+                your workflow and winning more work.
               </p>
             </div>
           </div>
@@ -130,56 +153,61 @@ export default class Home extends React.Component {
             <div className="column column--75 margin-top-medium">
               <h4>
                 <span className="number-holder color-midcentury">
-                <VisibilitySensor
-                  onChange={this.onVisibilityChange}
-                  delayedCall
-                >
-                  <CountUp
-                    start={0}
-                    end={this.state.didViewCountUp ? 40 : 0}
-                    suffix="%"
-                    duration={3}
-                  />
-                </VisibilitySensor></span> Decrease in phone calls
+                  <VisibilitySensor
+                    onChange={this.onVisibilityChange}
+                    delayedCall
+                  >
+                    <CountUp
+                      start={0}
+                      end={this.state.didViewCountUp ? 40 : 0}
+                      suffix="%"
+                      duration={3}
+                    />
+                  </VisibilitySensor>
+                </span>{" "}
+                Decrease in phone calls
               </h4>
             </div>
 
             <div className="column column--75">
               <h4>
                 <span className="number-holder color-scrub">
-                <VisibilitySensor
-                  onChange={this.onVisibilityChange}
-                  delayedCall
-                >
-                  <CountUp
-                    start={0}
-                    end={this.state.didViewCountUp ? 65 : 0}
-                    suffix="%"
-                    duration={3}
-                  />
-                </VisibilitySensor></span> Reduction in email volume
+                  <VisibilitySensor
+                    onChange={this.onVisibilityChange}
+                    delayedCall
+                  >
+                    <CountUp
+                      start={0}
+                      end={this.state.didViewCountUp ? 65 : 0}
+                      suffix="%"
+                      duration={3}
+                    />
+                  </VisibilitySensor>
+                </span>{" "}
+                Reduction in email volume
               </h4>
             </div>
 
             <div className="column column--75">
               <h4>
                 <span className="number-holder color-quartz">
-                <VisibilitySensor
-                  onChange={this.onVisibilityChange}
-                  delayedCall
-                >
-                  <CountUp
-                    start={0}
-                    end={this.state.didViewCountUp ? 98 : 0}
-                    suffix="%"
-                    duration={3}
-                  />
-                </VisibilitySensor></span> Appointment compliance
+                  <VisibilitySensor
+                    onChange={this.onVisibilityChange}
+                    delayedCall
+                  >
+                    <CountUp
+                      start={0}
+                      end={this.state.didViewCountUp ? 98 : 0}
+                      suffix="%"
+                      duration={3}
+                    />
+                  </VisibilitySensor>
+                </span>{" "}
+                Appointment compliance
               </h4>
             </div>
           </div>
         </div>
-
 
         <div className="breakout white padding-top-medium padding-bottom-large">
           <div className="columns">
@@ -199,7 +227,7 @@ export default class Home extends React.Component {
                   people's lives.”
                 </p>
               </div>
-              
+
               <div className={styles.citation}>
                 <img src="./images/avatar_001.png" alt="Joe Bob" />
                 <p className="large color-hull">Wendy Watson</p>
@@ -211,8 +239,8 @@ export default class Home extends React.Component {
               <div className={styles.quote}>
                 <p>
                   “If you asked me to design something to manage my mobile
-                  phlebotomy team, it would be Workpath. They got it so right, it’s
-                  almost uncanny.”
+                  phlebotomy team, it would be Workpath. They got it so right,
+                  it’s almost uncanny.”
                 </p>
               </div>
 
@@ -226,8 +254,8 @@ export default class Home extends React.Component {
             <div className={styles.bordered}>
               <div className={styles.quote}>
                 <p>
-                  “Before Workpath I was afraid of computers. But I like computers
-                  and Workpath now. What was the question?”
+                  “Before Workpath I was afraid of computers. But I like
+                  computers and Workpath now. What was the question?”
                 </p>
               </div>
 
@@ -238,7 +266,6 @@ export default class Home extends React.Component {
               </div>
             </div>
           </div>
-          
         </div>
       </Fragment>
     );

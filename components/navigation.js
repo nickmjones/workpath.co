@@ -75,7 +75,7 @@ export default class Navigation extends Component {
           Workpath is now free for small teams &rarr;
         </div>
 
-        <ul className={ this.state.isAtPageTop ? `${styles.navigation}` : `${styles.navigationShadow}` } role="navigation">
+        <ul className={styles.navigation} role="navigation">
           <li className={styles.navigationLogo}>
             <Link href="/">
               <a><img src="/wp_logo.svg" width="140px" alt="Workpath logo" /></a>
@@ -108,10 +108,10 @@ export default class Navigation extends Component {
               <a>Get a Demo</a>
             </Link>
           </li>
-          <li onClick={this.toggleMenuClick} className={styles.hamburger}>
-            <Hamburger />
-          </li>
         </ul>
+        <span className={styles.trigger} onClick={this.toggleMenuClick}>
+          <Hamburger />
+        </span>
       </>
     );
   }
