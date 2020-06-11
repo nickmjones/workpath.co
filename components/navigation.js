@@ -1,21 +1,20 @@
-import React, { Component } from 'react'
-import styles from '../styles/modules/navigation.module.scss'
-import Hamburger from './hamburger'
-import Link from 'next/link'
+import React, { Component } from "react";
+import styles from "../styles/modules/navigation.module.scss";
+import Hamburger from "./hamburger";
+import Link from "next/link";
 
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isMenuOpen: false,
-      isAtPageTop: true
+      isAtPageTop: true,
     };
   }
 
   toggleMenuClick = () => {
-    this.setState(({
+    this.setState({
       isMenuOpen: !this.state.isMenuOpen,
-    }));
+    });
   };
 
   handleScroll = () => {
@@ -33,44 +32,6 @@ export default class Navigation extends Component {
   render() {
     return (
       <>
-        <div
-          className={
-            this.state.isMenuOpen
-              ? `${styles.overlayOn}`
-              : `${styles.overlayOff}`
-          }
-        >
-          <ul>
-            <li>
-              <Link href="/platform">
-                <a>platform</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/casestudies">
-                <a>case studies</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/company">
-                <a>company</a>
-              </Link>
-            </li>
-            <li>
-              <a href="https://blog.workpath.co">blog</a>
-            </li>
-            <li>
-              <a href="https://app.workpath.co">log in</a>
-            </li>
-            <li>
-              <Link href="/demo">
-                <a>get a demo</a>
-              </Link>
-            </li>
-          </ul>
-
-        </div>
-
         <div className={styles.banner}>
           Workpath is now free for small teams &rarr;
         </div>
@@ -78,7 +39,9 @@ export default class Navigation extends Component {
         <ul className={styles.navigation} role="navigation">
           <li className={styles.navigationLogo}>
             <Link href="/">
-              <a><img src="/wp_logo.svg" width="140px" alt="Workpath logo" /></a>
+              <a>
+                <img src="/wp_logo.svg" width="140px" alt="Workpath logo" />
+              </a>
             </Link>
           </li>
           <li className={styles.autohide}>
@@ -109,9 +72,6 @@ export default class Navigation extends Component {
             </Link>
           </li>
         </ul>
-        <span className={styles.trigger} onClick={this.toggleMenuClick}>
-          <Hamburger />
-        </span>
       </>
     );
   }

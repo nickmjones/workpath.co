@@ -1,5 +1,6 @@
 @import "./reset.css";
 @import "./base/base";
+@import "./modules/overlay.scss";
 
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
@@ -317,15 +318,15 @@ figure p + p {
 
 .hero {
   grid-column: 1 / -1;
-  padding: 2rem;
-  background-color: color(scrub);
+  padding: 4rem 2rem;
+  background-color: color(fog);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  min-height: calc(100vh - 10rem);
 
   @include respond-to(md) {
     background-color: white;
     padding: 2rem 10vw;
+    min-height: calc(100vh - 10rem);
   }
 
   .caption {
@@ -337,10 +338,14 @@ figure p + p {
     flex-direction: column;
 
     h3 {
-      font-size: 4vw;
+      font-size: 8vw;
       margin-bottom: 1.1rem;
       line-height: 1.2;
       font-family: $font-display;
+
+      @include respond-to(md) {
+        font-size: 4vw;
+      }
     }
 
     @include respond-to(md) {

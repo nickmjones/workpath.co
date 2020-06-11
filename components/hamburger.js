@@ -1,33 +1,61 @@
-import React from 'react';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faTimes, faEllipsisV } from "@fortawesome/free-solid-svg-icons";
+
+const times = <FontAwesomeIcon icon={faTimes} size="xs" />;
+const ellipsis = <FontAwesomeIcon icon={faEllipsisV} size="lg" />;
+const linkedin = <FontAwesomeIcon icon={faLinkedin} size="xs" />;
+const twitter = <FontAwesomeIcon icon={faTwitter} size="xs" />;
 
 class Hamburger extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isCloseButton: false,
+      overlayVisible: false,
     };
   }
 
-  handleButtonClick = () => {
-    this.setState((state) => ({
-      isCloseButton: !this.state.isCloseButton,
-    }));
+  setOverlayVisibility = () => {
+    this.setState({
+      overlayVisible: !this.state.overlayVisible,
+    });
   };
 
   render() {
-    if (this.state.isCloseButton === true) {
-      return (
-        <span className="symbol" onClick={this.handleButtonClick}>
-          <img src="/close.svg" />
-        </span>
-      );
-    } else {
-      return (
-        <span className="symbol" onClick={this.handleButtonClick}>
-          <img src="/hamburger.svg" />
-        </span>
-      );
-    }
+    return (
+      <>
+        <div className="menutrigger" onClick={this.setOverlayVisibility}>
+          {ellipsis}
+        </div>
+        <div
+          className={
+            this.state.overlayVisible
+              ? "overlay overlay--visible"
+              : "overlay overlay--hidden"
+          }
+        >
+          <ul className="overlay__links">
+            <li>Platform</li>
+            <li>Case Studies</li>
+            <li>Company</li>
+            <li>Blog</li>
+            <li>Log In</li>
+            <li>Get a demo</li>
+          </ul>
+
+          <ul className="overlay__actions">
+            <li className="spaced" onClick={this.setOverlayVisibility}>{times}</li>
+            <li>{linkedin}</li>
+            <li>{twitter}</li>
+          </ul>
+
+          <div className="overlay__legal">
+            Copyright &copy; 2020 Workpath
+          </div>
+        </div>
+      </>
+    );
   }
 }
 

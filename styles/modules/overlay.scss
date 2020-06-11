@@ -1,0 +1,57 @@
+.overlay {
+  background: color(midcentury);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding-top: 1.25rem;
+  transition: opacity .20s ease-in-out;
+  overflow: hidden;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &--visible {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  ul li {
+    font-size: $h4-size;
+  }
+}
+
+.overlay__links {
+  padding: 3rem;
+}
+
+.overlay__actions {
+  padding: 3rem;
+  margin-left: auto;
+
+  li {
+    text-align: center;
+  }
+  li.spaced {
+    margin-bottom: 4rem;
+  }
+}
+
+.overlay__legal {
+  position: absolute;
+  bottom: 4rem;
+  left: 4rem;
+}
+
+.menutrigger {
+  position: absolute;
+  top: 5.75rem;
+  right: 3.75rem;
+  z-index: 999;
+  pointer-events: all;
+}

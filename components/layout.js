@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "./navigation";
+import Overlay from "../components/hamburger";
 import Footer from "./footer";
 
 export default function Homepage({ children }) {
@@ -14,6 +15,7 @@ export default function Homepage({ children }) {
       </Head>
       <div className="wrapper">
         <Navigation />
+        <Overlay />
         {children}
         <Footer />
       </div>

@@ -11,65 +11,12 @@
   z-index: 999;
 }
 
-.overlay {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  z-index: 80;
-  background: color(midcentury);
-  @include animate(0.2s, ease-in-out);
-  padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-
-  & * {
-    grid-column: 1 / -1;
-  }
-
-  ul {
-    margin-top: 13vh;
-  }
-
-  ul li {
-    color: white;
-    font-family: $font-display;
-    font-size: $h5-size;
-    line-height: 1.2;
-
-    @include respond-to(md) {
-      font-size: $h3-size;
-    }
-
-    a {
-      color: white;
-      text-decoration: none;
-    }
-  }
-
-  @include respond-to(md) {
-    padding: 5vw;
-  }
-}
-.overlayOn {
-  composes: overlay;
-  opacity: 1;
-  pointer-events: all;
-  transform: translateY(0);
-}
-.overlayOff {
-  composes: overlay;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-2rem);
-}
-
 .navigation {
   height: $height-navigation;
-  padding: 0 4rem 0 1rem;
   list-style: none;
   display: flex;
   align-items: center;
-  grid-column: 1/13;
+  grid-column: 2/12;
   z-index: 999;
   @include animate(0.3s, ease-in-out);
 }
