@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Navigation from "./navigation";
-import Overlay from "../components/hamburger";
+import Overlay from "./overlay";
 import Footer from "./footer";
 
 export default function Homepage({ children }) {
