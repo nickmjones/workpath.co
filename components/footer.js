@@ -2,6 +2,7 @@ export default function Footer() {
   return (
     <section className="breakout bgcolor-belaire padding-y-xxlarge">
       <div className="columns">
+
         <div className="column">
           <ul>
             <li>
@@ -13,7 +14,7 @@ export default function Footer() {
         </div>
 
         <div className="column column--is-flex">
-          <div className="column margin-bottom-medium">
+          <div className="column no-pad padding-right-small">
             <p className="large">Company</p>
             <ul className="margin-top-small">
               <li>Company</li>
@@ -22,7 +23,8 @@ export default function Footer() {
               <li>Blog</li>
             </ul>
           </div>
-          <div className="column margin-bottom-medium">
+
+          <div className="column no-pad padding-right-small">
             <p className="large">Resources</p>
             <ul className="margin-top-small">
               <li>Help</li>
@@ -31,7 +33,8 @@ export default function Footer() {
               <li>Terms of Service</li>
             </ul>
           </div>
-          <div className="column margin-bottom-medium">
+
+          <div className="column no-pad padding-right-small">
             <p className="large">Follow Us</p>
             <ul className="margin-top-small">
               <li>
@@ -42,6 +45,7 @@ export default function Footer() {
               <li>Join the mailing list</li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
