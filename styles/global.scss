@@ -325,7 +325,7 @@ figure p + p {
 
   @include respond-to(md) {
     background-color: white;
-    padding: 2rem 10vw;
+    padding: 0 10vw;
     min-height: calc(100vh - 10rem);
   }
 

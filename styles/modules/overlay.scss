@@ -10,7 +10,7 @@
 .overlay {
   background: color(midcentury);
   position: fixed;
-  top: 0;
+  top: -9999;
   left: 0;
   z-index: 99;
   width: 100vw;
@@ -26,6 +26,7 @@
   }
 
   &--visible {
+    top: 0;
     opacity: 1;
     pointer-events: all;
     transform: translateY(0);

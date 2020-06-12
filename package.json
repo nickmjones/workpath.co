@@ -17,6 +17,7 @@
     "date-fns": "^2.13.0",
     "gray-matter": "^4.0.2",
     "next": "9.4.0",
+    "now": "^19.1.0",
     "raw-loader": "^4.0.1",
     "react": "16.13.1",
     "react-countup": "^4.3.3",

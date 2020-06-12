@@ -6,7 +6,7 @@ class Hero extends Component {
 
   render() {
     return (
-      <header className="hero">
+      <header className="hero fade-in">
         <div className="caption">
           <p className="large color-quartz">{this.props.section}</p>
           <h3>{this.props.headline}</h3>
