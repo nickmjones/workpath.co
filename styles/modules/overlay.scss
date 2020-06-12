@@ -6,17 +6,13 @@
   z-index: 9999;
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: none;
   padding-top: 1.25rem;
-  transition: opacity .20s ease-in-out;
+  transition: opacity .40s ease-in-out;
   overflow: hidden;
 
-  &--hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
-
   &--visible {
+    display: flex;
     opacity: 1;
     pointer-events: all;
   }
