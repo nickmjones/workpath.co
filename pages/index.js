@@ -133,7 +133,7 @@ export default class Home extends React.Component {
               Want to know how Workpath can help with your specific business?
             </p>
             <p className="large color-hull">
-              See case studies on some successful partnerships. &rarr;
+              <Link href="/casestudies"><a>See case studies on some successful partnerships. &rarr;</a></Link>
             </p>
           </div>
         </div>
@@ -223,46 +223,39 @@ export default class Home extends React.Component {
             <div className={styles.bordered}>
               <div className={styles.quote}>
                 <p>
-                  “My quote is a little shorter. Sorry. I was literally saving
-                  people's lives.”
+                  “Workpath enables our customers—from hospitals to outpatient imaging centers to urgent care facilities and beyond—to address the increasing need for imaging studies and the shortage of radiologic technologists.”
                 </p>
               </div>
 
               <div className={styles.citation}>
-                <img src="./images/avatar_001.png" alt="Joe Bob" />
-                <p className="large color-hull">Wendy Watson</p>
-                <p className="small color-quartz">CEO, Helios Health</p>
+                <p className="large color-hull">Nanci Wozniak</p>
+                <p className="small color-quartz">Vice President of Education &amp; Workforce Solutions at Siemens Healthineers</p>
               </div>
             </div>
 
             <div className={styles.bordered}>
               <div className={styles.quote}>
                 <p>
-                  “If you asked me to design something to manage my mobile
-                  phlebotomy team, it would be Workpath. They got it so right,
-                  it’s almost uncanny.”
+                  “Workpath has been essential in allowing us to quickly scale our mobile telehealth team. Vault has been able to safely and efficiently supervise the at-home testing process vital to helping people across the United States.”
                 </p>
               </div>
 
               <div className={styles.citation}>
-                <img src="./images/avatar_002.png" alt="Joe Bob" />
-                <p className="large color-hull">Wade Richards</p>
-                <p className="small color-quartz">Founder of HealthMo</p>
+                <p className="large color-hull">Jason Feldman</p>
+                <p className="small color-quartz">Founder/CEO, Vault Health</p>
               </div>
             </div>
 
             <div className={styles.bordered}>
               <div className={styles.quote}>
                 <p>
-                  “Before Workpath I was afraid of computers. But I like
-                  computers and Workpath now. What was the question?”
+                  “Workpath has helped reduce the manpower needed for each job while growing our volume. If we didn’t have the Workpath system we would still have to focus an additional 5 to 10 people working on all of our accounts just to get everything done.”
                 </p>
               </div>
 
               <div className={styles.citation}>
-                <img src="./images/avatar_003.png" alt="Joe Bob" />
-                <p className="large color-hull">Annette Murphy</p>
-                <p className="small color-quartz">Founder of CrewCorps</p>
+                <p className="large color-hull">Jacqueline Rivera</p>
+                <p className="small color-quartz">COO, Phlebotek</p>
               </div>
             </div>
           </div>
