@@ -10,24 +10,21 @@
 .overlay {
   background: color(midcentury);
   position: fixed;
-  top: -9999;
   left: 0;
   z-index: 99;
   width: 100vw;
   height: 100vh;
   padding-top: 1.25rem;
-  display: flex;
+  opacity: 0;
+  display: none;
+  transform: translateY(-4rem);
+  pointer-events: none;
   transition: all 0.30s ease-in-out;
-
-  &--hidden {
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-4rem);
-  }
 
   &--visible {
     top: 0;
     opacity: 1;
+    display: flex;
     pointer-events: all;
     transform: translateY(0);
   }

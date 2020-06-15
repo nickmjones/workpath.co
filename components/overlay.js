@@ -33,7 +33,7 @@ class Hamburger extends React.Component {
           className={
             this.state.overlayVisible
               ? "overlay overlay--visible"
-              : "overlay overlay--hidden"
+              : "overlay"
           }
         >
           <ul className="overlay__links">
