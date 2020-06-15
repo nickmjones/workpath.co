@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <section className="breakout bgcolor-belaire padding-y-xxlarge">
+    <footer className="breakout bgcolor-belaire padding-y-xxlarge">
       <div className="columns">
 
         <div className="column">
@@ -17,20 +19,20 @@ export default function Footer() {
           <div className="column no-pad padding-right-small">
             <p className="large">Company</p>
             <ul className="margin-top-small">
-              <li>Company</li>
-              <li>Platform</li>
-              <li>Case Studies</li>
-              <li>Blog</li>
+              <li><Link href="/company"><a>Company</a></Link></li>
+              <li><Link href="/platform"><a>Platform</a></Link></li>
+              <li><Link href="/casestudies"><a>Case Studies</a></Link></li>
+              <li><a href="https://blog.workpath.co">Blog</a></li>
             </ul>
           </div>
 
           <div className="column no-pad padding-right-small">
             <p className="large">Resources</p>
             <ul className="margin-top-small">
-              <li>Help</li>
-              <li>Blog</li>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
+              <li><Link href="/careers"><a>Careers</a></Link></li>
+              <li><a href="help.wrokpath.co">Help Center</a></li>
+              <li><Link href="/privacy"><a>Privacy</a></Link></li>
+              <li><Link href="/tos"><a>Terms of Service</a></Link></li>
             </ul>
           </div>
 
@@ -48,6 +50,6 @@ export default function Footer() {
 
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
