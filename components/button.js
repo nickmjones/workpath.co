@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/modules/button.module.scss";
 
 class Button extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +16,7 @@ class Button extends React.Component {
   };
 
   render() {
-    if(this.state.loading === true) {
+    if (this.state.loading === true) {
       return (
         <div onClick={this.handleButtonClick} className={styles.loading}>
           Loading...
@@ -25,13 +24,15 @@ class Button extends React.Component {
       );
     } else {
       return (
-        <div onClick={this.handleButtonClick} className={`${styles[this.props.type]}`}>
+        <div
+          onClick={this.handleButtonClick}
+          className={`${styles[this.props.type]}`}
+        >
           {this.props.text}
         </div>
       );
     }
   }
-
 }
 
 export default Button;

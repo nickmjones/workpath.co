@@ -8,6 +8,7 @@
   font-size: 1.125rem;
   height: 4rem;
   line-height: 4rem;
+  z-index: 99;
 }
 
 .navigation {
@@ -15,8 +16,9 @@
   list-style: none;
   display: flex;
   align-items: center;
-  grid-column: 2/12;
+  grid-column: 1/-1;
   z-index: 80;
+  margin: 0 3rem 0 2rem;
 }
 
 li.navigationLogo {

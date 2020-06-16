@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 import Button from "../components/button";
-import Hero from "../components/hero";
 
 export default function Careers() {
   return (
@@ -10,10 +9,13 @@ export default function Careers() {
         <title>workpath.co | Careers</title>
       </Head>
 
-      <Hero
-        section="Careers"
-        headline="Join us as we change healthcare for the better."
-      />
+      <section className="breakout bgcolor-fog margin-bottom-large">
+          <div className="columns margin-y-xlarge fade-in">
+            <div className="column column--66 column--center-children">
+              <h4 className="color-admiral">Join us as we change healthcare for the better.</h4>
+            </div>
+          </div>
+        </section>
 
       <div className="columns margin-bottom-xxlarge">
         <div className="column column--66">

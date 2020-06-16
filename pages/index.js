@@ -90,7 +90,7 @@ export default class Home extends React.Component {
                   right skills. No more texting “is this something you can do?”
                 </p>
                 <Link href="/platform">
-                  <a>
+                  <a className="plain">
                     <Button type="default" text="See all features" />
                   </a>
                 </Link>
@@ -111,7 +111,7 @@ export default class Home extends React.Component {
                   email threads.
                 </p>
                 <Link href="/demo">
-                  <a>
+                  <a className="plain">
                     <Button type="default" text="Get a demo" />
                   </a>
                 </Link>

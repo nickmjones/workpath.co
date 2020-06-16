@@ -9,24 +9,22 @@
 
 .overlay {
   background: color(midcentury);
+  visibility: hidden;
   position: fixed;
+  top: 0;
   left: 0;
-  z-index: 99;
   width: 100vw;
   height: 100vh;
-  padding-top: 1.25rem;
+  z-index: 90;
+  display: flex;
   opacity: 0;
-  display: none;
-  transform: translateY(-4rem);
-  pointer-events: none;
-  transition: all 0.30s ease-in-out;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
 
   &--visible {
-    top: 0;
     opacity: 1;
-    display: flex;
-    pointer-events: all;
-    transform: translateY(0);
+    visibility: visible;
   }
 
   ul li {
@@ -35,6 +33,7 @@
 }
 
 .overlay__links {
+  margin-top: 3rem;
   padding: 3rem;
 
   li {
@@ -68,8 +67,52 @@
 
 .menutrigger {
   position: absolute;
-  top: 5.75rem;
-  right: 3.75rem;
-  z-index: 80;
+  top: 5.8rem;
+  right: 1.25rem;
+  z-index: 99;
   pointer-events: all;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+  .bar {
+    width: 24px;
+    height: 3px;
+    background: color(coal);
+    transition: 0.2s;
+    position: absolute;
+    &--top {
+      top: 0;
+      left: 0;
+    }
+    &--middle {
+      top: 9px;
+      left: 0;
+      opacity: 1;
+    }
+    &--bottom {
+      top: 18px;
+      left: 0;
+    }
+  }
+}
+.menutrigger--close {
+  .bar {
+    &--top {
+      width: 32px;
+      top: 10px;
+      left: -5px;
+      transform: rotate(45deg);
+    }
+    &--middle {
+      opacity: 0;
+    }
+    &--bottom {
+      width: 32px;
+      top: 10px;
+      left: -5px;
+      transform: rotate(-45deg);
+    }
+  }
 }
