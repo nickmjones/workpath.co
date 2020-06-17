@@ -3,7 +3,12 @@ import Head from "next/head";
 import Hero from "../components/hero";
 import { postsAll } from "../api";
 import { linkResolver } from "../helpers";
+import moment from "moment";
 import styles from "../styles/modules/blog.module.scss";
+
+const truncate = (str) => {
+  return str.length > 140 ? str.substring(0, 140) + "..." : str;
+}
 
 const Blog = ({ posts = [] }) => (
   <>
@@ -11,23 +16,33 @@ const Blog = ({ posts = [] }) => (
       <title>workpath.co | blog</title>
     </Head>
     <Hero
-        section="Workpath Blog"
-        headline="From the Trail"
-        image="hero_cases@2x.png"
-      />
+      section="Workpath Blog"
+      headline="From the Trail"
+      image="hero_cases@2x.png"
+    />
     <div className="columns">
-      <ul className={styles.posts}>
-        {posts.map((post, index) => (
-          <li key={index}>
-            <Link
-              as={linkResolver(post)}
-              href={`/blogPost?slug=${post.uid}`}
-            >
-              <h5><a>{post.data.title[0].text}</a></h5>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <div className="column column--66 no-pad">
+        <ul className={styles.posts}>
+          {posts.map((post, index) => (
+            <li key={index}>
+              <p className="small">
+                {(moment(post.data.publish_date).format('MMMM Do, YYYY'))}
+              </p>
+              <Link as={linkResolver(post)} href={`/blogPost?slug=${post.uid}`}>
+                <h5>
+                  <a>{post.data.title[0].text}</a>
+                </h5>
+              </Link>
+              <p>{truncate(post.data.short_description[0].text)} - 
+              <Link as={linkResolver(post)} href={`/blogPost?slug=${post.uid}`}>
+                <a> Keep Reading</a>
+              </Link>
+              </p>
+            </li>
+          ))}
+        </ul>
+
+      </div>
     </div>
   </>
 );
