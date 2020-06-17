@@ -16,7 +16,8 @@ export default function Footer() {
         </div>
 
         <div className="column column--is-flex">
-          <div className="column no-pad padding-right-small">
+
+          <div className="column">
             <p className="large">Company</p>
             <ul className="margin-top-small">
               <li><Link href="/company"><a>Company</a></Link></li>
@@ -26,7 +27,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="column no-pad padding-right-small">
+          <div className="column">
             <p className="large">Resources</p>
             <ul className="margin-top-small">
               <li><Link href="/careers"><a>Careers</a></Link></li>
@@ -36,7 +37,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="column no-pad padding-right-small">
+          <div className="column">
             <p className="large">Follow Us</p>
             <ul className="margin-top-small">
               <li>

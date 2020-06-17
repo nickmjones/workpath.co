@@ -32,7 +32,7 @@ export default class Navigation extends Component {
     return (
       <>
         <div className={styles.banner}>
-          Workpath is now free for small teams &rarr;
+          <a href="https://try.workpath.co/comp-free-lp" target="_blank">Workpath is now free for small teams &rarr;</a>
         </div>
 
         <ul className={styles.navigation} role="navigation">
@@ -59,7 +59,9 @@ export default class Navigation extends Component {
             </Link>
           </li>
           <li className={styles.autohide}>
-            <a href="https://blog.workpath.co">Blog</a>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </li>
           <li className={`${styles.divider} ${styles.autohide}`}></li>
           <li className={styles.autohide}>

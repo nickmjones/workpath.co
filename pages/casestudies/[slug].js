@@ -1,5 +1,6 @@
 import * as React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import Button from "../../components/button";
@@ -29,7 +30,7 @@ export default function BlogTemplate({ frontmatter, markdownBody }) {
   }
   function GetHeroImage() {
     var image = frontmatter.image;
-    if (image !=null) {
+    if (image != null) {
       return(
         <section
           className="breakout bgcolor-scrub padding-y-xxlarge margin-bottom-large"
@@ -83,7 +84,7 @@ export default function BlogTemplate({ frontmatter, markdownBody }) {
           <ShowStats />
           <p className="large margin-top-medium">Start today</p>
           <p>Book a demo to learn more about how Workpath can improve your work.</p>
-          <Button type="default" text="Book a demo" />
+          <Link href="/demo"><a><Button type="default" text="Book a demo" /></a></Link>
         </div>
         <div className="column column--66 margin-bottom-medium">
           <h5 className="margin-bottom-medium">{frontmatter.intro}</h5>

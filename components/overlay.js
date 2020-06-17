@@ -55,7 +55,9 @@ class Hamburger extends React.Component {
               </Link>
             </li>
             <li onClick={this.setOverlayVisibility}>
-              <a href="https://blog.workpath.co">Blog</a>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
             </li>
             <li onClick={this.setOverlayVisibility}>
               <a href="https://app.workpath.co">Log In</a>

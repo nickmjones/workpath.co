@@ -132,11 +132,6 @@ body * {
 a {
   color: color(hyperlink);
   text-decoration: none;
-  border-bottom: 2px solid color(hyperlink);
-
-  &.plain {
-    border: 0;
-  }
 }
 
 /*
@@ -234,6 +229,12 @@ a {
   &--66 {
     @include respond-to(md) {
       flex: 0 66%;
+    }
+  }
+  &--medium {
+    @include respond-to(md) {
+      flex: 0 70%;
+      margin: auto;
     }
   }
 
@@ -374,6 +375,14 @@ figure p + p {
     img {
       width: 100%;
     }
+  }
+}
+
+article.blogpost {
+  img {
+    width: 100%;
+    max-width: 500px;
+    margin: 2rem 0;
   }
 }
 

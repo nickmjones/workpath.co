@@ -1,0 +1,11 @@
+@import "../base/base";
+
+ul.posts {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  flex-wrap: wrap;
+  li {
+    padding: 2rem;
+  }
+}

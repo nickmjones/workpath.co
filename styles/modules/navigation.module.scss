@@ -9,6 +9,11 @@
   height: 4rem;
   line-height: 4rem;
   z-index: 99;
+
+  a {
+    color: color(fog);
+    border: 0;
+  }
 }
 
 .navigation {
