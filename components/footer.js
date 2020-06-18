@@ -46,6 +46,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>Join the mailing list</li>
+              <li>For media inquiries: press@workpath.co</li>
             </ul>
           </div>
 
