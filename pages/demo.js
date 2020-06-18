@@ -6,6 +6,9 @@ export default function Company() {
     <>
       <Head>
         <title>workpath.co | Book a demo</title>
+        <meta name="description" content="Workpath helps manage your mobile healthcare team, win more work, and dramatically improve patient experience." />
+        <meta property="og:title" content="workpath.co" />
+        <meta property="og:image" content="../public/linkedin_og.png" />
       </Head>
 
         <section className="breakout bgcolor-fog margin-bottom-large">

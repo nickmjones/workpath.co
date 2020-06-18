@@ -5,6 +5,9 @@ export default function Terms() {
     <>
       <Head>
         <title>workpath.co | Terms of service</title>
+        <meta name="description" content="Workpath helps manage your mobile healthcare team, win more work, and dramatically improve patient experience." />
+        <meta property="og:title" content="workpath.co" />
+        <meta property="og:image" content="../public/linkedin_og.png" />
       </Head>
       <div className="columns">
         <div className="column">

@@ -27,6 +27,9 @@ export default class Home extends React.Component {
       <Fragment>
         <Head>
           <title>workpath.co | Home</title>
+          <meta name="description" content="Workpath helps manage your mobile healthcare team, win more work, and dramatically improve patient experience." />
+          <meta property="og:title" content="workpath.co" />
+          <meta property="og:image" content="../public/linkedin_og.png" />
         </Head>
 
         <Hero
