@@ -23,7 +23,7 @@ export default class BlogPost extends Component {
         <>
           <Head>
             <title>workpath.co | blog | {RichText.asText(this.props.post.data.title)}</title>
-            <meta name="description" content="Workpath helps manage your mobile healthcare team, win more work, and dramatically improve patient experience." />
+            <meta name="description" content={this.props.post.data.short_description} />
             <meta property="og:title" content="workpath.co" />
             <meta property="og:image" content="../public/linkedin_og.png" />
           </Head>
