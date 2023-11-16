@@ -40,22 +40,22 @@ class Hamburger extends React.Component {
         >
           <ul className="overlay__links" onClick={this.toggleSwitchSymbol}>
             <li onClick={this.setOverlayVisibility}>
-              <Link href="/platform">
+              <Link legacyBehavior href="/platform">
                 <a>Platform</a>
               </Link>
             </li>
             <li onClick={this.setOverlayVisibility}>
-              <Link href="/casestudies">
+              <Link legacyBehavior href="/casestudies">
                 <a>Case Studies</a>
               </Link>
             </li>
             <li onClick={this.setOverlayVisibility}>
-              <Link href="/company">
+              <Link legacyBehavior href="/company">
                 <a>Company</a>
               </Link>
             </li>
             <li onClick={this.setOverlayVisibility}>
-              <Link href="/blog">
+              <Link legacyBehavior href="/blog">
                 <a>Blog</a>
               </Link>
             </li>
@@ -63,7 +63,7 @@ class Hamburger extends React.Component {
               <a href="https://app.workpath.co">Log In</a>
             </li>
             <li onClick={this.setOverlayVisibility}>
-              <Link href="/demo">
+              <Link legacyBehavior href="/demo">
                 <a>Get a demo</a>
               </Link>
             </li>

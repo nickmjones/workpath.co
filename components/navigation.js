@@ -37,29 +37,29 @@ export default class Navigation extends Component {
 
         <ul className={styles.navigation} role="navigation">
           <li className={styles.navigationLogo}>
-            <Link href="/">
+            <Link legacyBehavior href="/">
               <a>
                 <img src="/wp_logo.svg" width="140px" alt="Workpath logo" />
               </a>
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/platform">
+            <Link legacyBehavior href="/platform">
               <a>Platform</a>
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/casestudies">
+            <Link legacyBehavior href="/casestudies">
               <a>Case Studies</a>
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/company">
+            <Link legacyBehavior href="/company">
               <a>Company</a>
             </Link>
           </li>
           <li className={styles.autohide}>
-            <Link href="/blog">
+            <Link legacyBehavior href="/blog">
               <a>Blog</a>
             </Link>
           </li>
@@ -68,7 +68,7 @@ export default class Navigation extends Component {
             <a href="https://app.workpath.co">Log In</a>
           </li>
           <li className={`${styles.special} ${styles.autohide}`}>
-            <Link href="/demo">
+            <Link legacyBehavior href="/demo">
               <a>Get a Demo</a>
             </Link>
           </li>

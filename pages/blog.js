@@ -31,13 +31,13 @@ const Blog = ({ posts = [] }) => (
               <p className="small">
                 {(moment(post.data.publish_date).format('MMMM Do, YYYY'))}
               </p>
-              <Link as={linkResolver(post)} href={`/blogPost?slug=${post.uid}`}>
+              <Link legacyBehavior as={linkResolver(post)} href={`/blogPost?slug=${post.uid}`}>
                 <h5>
                   <a>{post.data.title[0].text}</a>
                 </h5>
               </Link>
               <p>{truncate(post.data.short_description[0].text)} - 
-              <Link as={linkResolver(post)} href={`/blogPost?slug=${post.uid}`}>
+              <Link legacyBehavior as={linkResolver(post)} href={`/blogPost?slug=${post.uid}`}>
                 <a> Keep Reading</a>
               </Link>
               </p>

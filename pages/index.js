@@ -92,7 +92,7 @@ export default class Home extends React.Component {
                   Workpath automatically routes jobs to the person with the
                   right skills. No more texting “is this something you can do?”
                 </p>
-                <Link href="/platform">
+                <Link legacyBehavior href="/platform">
                   <a className="plain">
                     <Button type="default" text="See all features" />
                   </a>
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
                   communicate with your team from anywhere. No more texting or
                   email threads.
                 </p>
-                <Link href="/demo">
+                <Link legacyBehavior href="/demo">
                   <a className="plain">
                     <Button type="default" text="Get a demo" />
                   </a>
@@ -136,7 +136,7 @@ export default class Home extends React.Component {
               Want to know how Workpath can help with your specific business?
             </p>
             <p className="large color-hull">
-              <Link href="/casestudies"><a>See case studies on some successful partnerships. &rarr;</a></Link>
+              <Link legacyBehavior href="/casestudies"><a>See case studies on some successful partnerships. &rarr;</a></Link>
             </p>
           </div>
         </div>

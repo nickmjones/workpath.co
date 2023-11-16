@@ -87,7 +87,7 @@ export default function BlogTemplate({ frontmatter, markdownBody }) {
           <ShowStats />
           <p className="large margin-top-medium">Start today</p>
           <p>Book a demo to learn more about how Workpath can improve your work.</p>
-          <Link href="/demo"><a><Button type="default" text="Book a demo" /></a></Link>
+          <Link legacyBehavior href="/demo"><a><Button type="default" text="Book a demo" /></a></Link>
         </div>
         <div className="column column--66 margin-bottom-medium">
           <h5 className="margin-bottom-medium">{frontmatter.intro}</h5>

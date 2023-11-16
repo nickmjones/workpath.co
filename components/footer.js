@@ -20,9 +20,9 @@ export default function Footer() {
           <div className="column">
             <p className="large">Company</p>
             <ul className="margin-top-small">
-              <li><Link href="/company"><a>Company</a></Link></li>
-              <li><Link href="/platform"><a>Platform</a></Link></li>
-              <li><Link href="/casestudies"><a>Case Studies</a></Link></li>
+              <li><Link legacyBehavior href="/company"><a>Company</a></Link></li>
+              <li><Link legacyBehavior href="/platform"><a>Platform</a></Link></li>
+              <li><Link legacyBehavior href="/casestudies"><a>Case Studies</a></Link></li>
               <li><a href="https://blog.workpath.co">Blog</a></li>
             </ul>
           </div>
@@ -30,10 +30,10 @@ export default function Footer() {
           <div className="column">
             <p className="large">Resources</p>
             <ul className="margin-top-small">
-              <li><Link href="/careers"><a>Careers</a></Link></li>
+              <li><Link legacyBehavior href="/careers"><a>Careers</a></Link></li>
               <li><a href="help.wrokpath.co">Help Center</a></li>
-              <li><Link href="/privacy"><a>Privacy</a></Link></li>
-              <li><Link href="/tos"><a>Terms of Service</a></Link></li>
+              <li><Link legacyBehavior href="/privacy"><a>Privacy</a></Link></li>
+              <li><Link legacyBehavior href="/tos"><a>Terms of Service</a></Link></li>
             </ul>
           </div>
 
